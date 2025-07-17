@@ -4,7 +4,7 @@ import { CollectingPaymentsComponent } from '../../common/collecting-payments/co
 
 @Component({
     selector: 'app-testimonials-page',
-    imports: [QuoteComponent, CollectingPaymentsComponent],
+    imports: [ CollectingPaymentsComponent],
     standalone: true,
     templateUrl: './testimonials-page.component.html',
     styleUrls: ['./testimonials-page.component.scss']
