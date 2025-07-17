@@ -1,0 +1,42 @@
+
+<!-- Navbar -->
+<!-- Top Info Bar -->
+<!-- Mobile Toggle Button -->
+<button class="block lg:hidden text-white" (click)="toggleDrawer()">
+    <span class="burger-menu">
+      <span class="top-bar"></span>
+      <span class="middle-bar"></span>
+      <span class="bottom-bar"></span>
+    </span>
+  </button>
+  
+  <!-- Drawer (Right Side Slide-in Menu) -->
+  <div
+    class="fixed top-0 right-0 h-full w-64 bg-black shadow-lg transform transition-transform duration-300 z-[9999] lg:hidden"
+    [class.translate-x-full]="!isDrawerOpen"
+    [class.translate-x-0]="isDrawerOpen"
+  >
+    <!-- Close button -->
+    <button class="absolute top-4 right-4 text-black" (click)="closeDrawer()">
+      ✕
+    </button>
+  
+    <!-- Drawer Navigation Items -->
+    <ul class="p-6 space-y-4">
+      <li><a routerLink="/" class="text-black font-medium" (click)="closeDrawer()">Home</a></li>
+      <li><a routerLink="/about" class="text-black font-medium" (click)="closeDrawer()">About Us</a></li>
+      <li><a routerLink="/services" class="text-black font-medium" (click)="closeDrawer()">Services</a></li>
+      <li><a routerLink="/contact" class="text-black font-medium" (click)="closeDrawer()">Contact Us</a></li>
+      <li><a routerLink="/skilludaan" class="text-black font-medium" (click)="closeDrawer()">Skill Udaan</a></li>
+    </ul>
+  </div>
+  
+  <!-- Overlay backdrop -->
+  <div
+    class="fixed inset-0 bg-black bg-opacity-50 z-[9998] lg:hidden transition-opacity"
+    *ngIf="isDrawerOpen"
+    (click)="closeDrawer()"
+  ></div>
+  
+    
+    

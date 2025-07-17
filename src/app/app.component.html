@@ -1,0 +1,18 @@
+<!-- app.component.html -->
+
+<!-- Wrap header‑top and navbar together in one div -->
+<div [ngClass]="{ 'hidden': router.url === '/login' || router.url === '/register' }">
+
+    <app-header-top class="fixed top-0 left-0 w-full z-50 h-[60px]"></app-header-top>
+  </div>
+  <app-navbar class="fixed top-[60px] left-0 w-full z-40"></app-navbar>
+  <app-landing></app-landing>
+<main>
+
+  <router-outlet></router-outlet>
+</main>
+
+<div [ngClass]="{ 'hidden': router.url === '/login' || router.url === '/register' }">
+  <app-footer></app-footer>
+  <app-back-to-top></app-back-to-top>
+</div>

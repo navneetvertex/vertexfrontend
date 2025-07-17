@@ -1,0 +1,46 @@
+<div
+  class="py-20 md:py-28 lg:py-32 xl:py-36 bg-gray-50 bg-[url('/images/main_bg.jpg')] bg-cover bg-center bg-no-repeat"
+>
+  <div class="px-4 sm:px-6 lg:px-8 container mx-auto">
+    
+    <!-- Section Title -->
+    <!-- <h2 class="text-3xl md:text-4xl font-bold text-center text-gray-900 mb-4">
+      We Offer
+    </h2>
+    <div class="w-20 h-1 bg-yellow-400 mx-auto mb-10 rounded"></div> -->
+    <div id="comp-kkgi794s" class="Z_l5lU ku3DBC zQ9jDz qvSjx3 Vq6kJx comp-kkgi794s wixui-rich-text" data-testid="richTextElement" data-motion-enter="done">
+      <h2 class="font_2 wixui-rich-text__text" style="font-size:45px; line-height:normal; text-align:center;"><span style="font-family:playfairdisplay-bold,playfair display,serif;" class="wixui-rich-text__text">
+      <span class="color_43 wixui-rich-text__text">
+        <span style="font-size:45px;" class="wixui-rich-text__text">
+      <span style="letter-spacing:0.05em;" class="wixui-rich-text__text"> We Offer</span></span></span><span style="color:#FFD15C;" class="wixui-rich-text__text">
+      <!-- <span style="font-size:45px;" class="wixui-rich-text__text">
+        <span style="letter-spacing:0.05em;" class="wixui-rich-text__text"> Us</span></span> -->
+      </span></span></h2>
+      </div>
+        <div class="comp-kkgi89rs comp-kkgi89rs aVng1S wixui-horizontal-line" style="--motion-width: 118px; --motion-height: 5px;" data-motion-enter="done"></div>
+    
+    <!-- 4x4x4 Cards -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-6">
+      <div
+        *ngFor="let feature of features; let i = index"
+        class="bg-white bg_img rounded-2xl shadow-md hover:shadow-lg transition duration-300 p-6 group"
+      >
+      
+        <img 
+          [src]="feature.image" 
+          alt="{{ feature.title }}" 
+       
+          class="w-20 h-20 rounded-full object-cover border-4 border-yellow-400 mx-auto"
+        />
+        <h3 class=" t_ceter font-semibold text-lg text-gray-800 mb-2 group-hover:text-yellow-500 transition">
+          {{ feature.title }}
+        </h3>
+
+        <!-- Description -->
+        <p class="text-gray-600 text-sm leading-relaxed">
+          {{ feature.description }}
+        </p>
+      </div>
+    </div>
+  </div>
+</div>

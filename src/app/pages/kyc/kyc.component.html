@@ -1,0 +1,54 @@
+
+
+<div class="pb-60 md:pb-80 lg:pb-100 xl:pb-130 pt-130 ">
+    <div class="px-10 sm:px-10 container mx-auto">
+        <span class="block text-primary text-[15px] md:text-[16px] lg:text-[20px] lg:text-[20px] font-semibold">
+            KYC Update
+        </span>
+        <form [formGroup]="kycFormGroup" novalidate class="contents">
+            <div class="py-30 px-20 grid grid-cols-1 lg:grid-cols-2 bg-gray gap-25">
+                <div class="mb-10">
+                    <label class="block mb-5 text-sm font-medium text-gray-700">Aadhar</label>
+                    <input type="text" formControlName="aadhar" class="rounded-lg h-20 md:h-30 lg:h-40 block w-full outline-0 pl-5 md:pl-10 lg:pl-[15px] text-black placeholder:text-secondary text-[12px] md:text-[13px] lg:text-[14px]">
+                    <div *ngIf="kycFormGroup.get('aadhar')?.touched && kycFormGroup.get('aadhar')?.invalid" class="text-red-500 text-xs mt-2">
+                        <div *ngIf="kycFormGroup.get('aadhar')?.errors?.['required']">Aadhar is required.</div>
+                        <div *ngIf="kycFormGroup.get('aadhar')?.errors?.['pattern']">Aadhar must be 12 digits.</div>
+                    </div>
+                </div>
+                <div class="mb-10">
+                    <label class="block mb-5 text-sm font-medium text-gray-700">PAN</label>
+                    <input type="text" formControlName="pan" class="rounded-lg h-20 md:h-30 lg:h-40 block w-full outline-0 pl-5 md:pl-10 lg:pl-[15px] text-black placeholder:text-secondary text-[12px] md:text-[13px] lg:text-[14px]">
+                    <div *ngIf="kycFormGroup.get('pan')?.touched && kycFormGroup.get('pan')?.invalid" class="text-red-500 text-xs mt-2">
+                        <div *ngIf="kycFormGroup.get('pan')?.errors?.['required']">PAN is required.</div>
+                        <div *ngIf="kycFormGroup.get('pan')?.errors?.['pattern']">Invalid PAN format.</div>
+                    </div>
+                </div>
+            </div>
+            <div class="py-30 px-20 grid grid-cols-1 lg:grid-cols-3 bg-gray gap-25">
+                <div class="mb-10">
+                    <label class="block mb-5 text-sm font-medium text-gray-700">Aadhar Front</label>
+                    <input (change)="onFileSelected($event, 'aadhar_front')" type="file" formControlName="aadhar_front" class="block w-full text-[12px] md:text-[13px] lg:text-[14px]">
+                    <div *ngIf="kycFormGroup.get('aadhar_front')?.touched && kycFormGroup.get('aadhar_front')?.invalid" class="text-red-500 text-xs mt-2">
+                        <div *ngIf="kycFormGroup.get('aadhar_front')?.errors?.['required']">Aadhar front image is required.</div>
+                    </div>
+                </div>
+                <div class="mb-10">
+                    <label class="block mb-5 text-sm font-medium text-gray-700">Aadhar Back</label>
+                    <input (change)="onFileSelected($event, 'aadhar_back')" type="file" formControlName="aadhar_back" class="block w-full text-[12px] md:text-[13px] lg:text-[14px]">
+                    <div *ngIf="kycFormGroup.get('aadhar_back')?.touched && kycFormGroup.get('aadhar_back')?.invalid" class="text-red-500 text-xs mt-2">
+                        <div *ngIf="kycFormGroup.get('aadhar_back')?.errors?.['required']">Aadhar back image is required.</div>
+                    </div>
+                </div>
+                <div class="mb-10">
+                    <label class="block mb-5 text-sm font-medium text-gray-700">PAN</label>
+                    <input (change)="onFileSelected($event, 'pan_image')" type="file" formControlName="pan_image" class="block w-full text-[12px] md:text-[13px] lg:text-[14px]">
+                    <div *ngIf="kycFormGroup.get('pan_image')?.touched && kycFormGroup.get('pan_image')?.invalid" class="text-red-500 text-xs mt-2">
+                        <div *ngIf="kycFormGroup.get('pan_image')?.errors?.['required']">PAN image is required.</div>
+                    </div>
+                </div>
+                <button (click)="submitKyc()" type="submit" class="text-black font-semibold text-[10px] md:text-[12px] lg:text-[14px] text-center block w-full rounded-full bg-warning px-10 py-5 md:py-[10px] lg:py-10 transition-all hover:bg-primary hover:text-white">
+                    Submit Now
+                </button>
+            </div>
+        </form>  </div>
+</div>

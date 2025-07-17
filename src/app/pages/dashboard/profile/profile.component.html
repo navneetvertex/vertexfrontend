@@ -1,0 +1,86 @@
+<!-- <div class="pt-[105px] md:pt-[135px] lg:pt-[165px] xl:pt-[174px] bg-gray relative z-1 before:left-0 before:right-0 before:bottom-0 before:-z-1 before:absolute before:bg-white before:h-70 md:before:h-40 xl:before:h-50 2xl:before:h-[125px]">
+    <div class="px-10 sm:px-0 container mx-auto">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-25">
+            <div class="col-span-2 lg:mt-25 xl:mt-[45px] 2xl:mt-[65px]">
+                
+            </div>
+        </div>
+    </div>
+</div> -->
+
+
+
+
+<div class="pb-10 md:pb-20 lg:pb-30 xl:pb-40 pt-130">
+    <div class="px-10 sm:px-10 container mx-auto">
+        <span class="block text-primary text-[15px] md:text-[16px] lg:text-[20px] lg:text-[20px] font-semibold">
+            Profile Update
+        </span>
+        <form [formGroup]="profileFormGroup" novalidate class="contents">
+            <div class="py-30 px-20 grid grid-cols-1 lg:grid-cols-2 bg-gray rounded-lg gap-25">
+                <div class="mb-10">
+                    <label class="block mb-5 text-sm font-medium text-gray-700">Name</label>
+                    <input type="text" formControlName="name" class="rounded-lg h-20 md:h-30 lg:h-40 block w-full outline-0 pl-5 md:pl-10 lg:pl-[15px] text-black placeholder:text-secondary text-[12px] md:text-[13px] lg:text-[14px]">
+                </div>
+                <div class="mb-10">
+                    <label class="block mb-5 text-sm font-medium text-gray-700">Email</label>
+                    <input type="email" formControlName="email_id" class="rounded-lg h-20 md:h-30 lg:h-40 block w-full outline-0 pl-5 md:pl-10 lg:pl-[15px] text-black placeholder:text-secondary text-[12px] md:text-[13px] lg:text-[14px]">
+                </div>
+                
+                <div class="mb-10">
+                    <label class="block mb-5 text-sm font-medium text-gray-700">Mobile Number</label>
+                    <input type="text" formControlName="mobile_number" class="rounded-lg h-20 md:h-30 lg:h-40 block w-full outline-0 pl-5 md:pl-10 lg:pl-[15px] text-black placeholder:text-secondary text-[12px] md:text-[13px] lg:text-[14px]">
+                </div>
+                <div class="mb-10">
+                    <label class="block mb-5 text-sm font-medium text-gray-700">Gender</label>
+                    <select formControlName="gender" class="rounded-lg h-20 md:h-30 lg:h-40 block w-full outline-0 pl-5 md:pl-10 lg:pl-[15px] text-black text-[12px] md:text-[13px] lg:text-[14px]">
+                        <option value="">Select Gender</option>
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+                <div class="mb-10">
+                    <label class="block mb-5 text-sm font-medium text-gray-700">Date of Birth</label>
+                    <input type="date" formControlName="date_of_birth" class="rounded-lg h-20 md:h-30 lg:h-40 block w-full outline-0 pl-5 md:pl-10 lg:pl-[15px] text-black text-[12px] md:text-[13px] lg:text-[14px]">
+                </div>
+                <div class="mb-10">
+                    <label class="block mb-5 text-sm font-medium text-gray-700">Guardian Name</label>
+                    <input type="text" formControlName="guardian_name" class="rounded-lg h-20 md:h-30 lg:h-40 block w-full outline-0 pl-5 md:pl-10 lg:pl-[15px] text-black placeholder:text-secondary text-[12px] md:text-[13px] lg:text-[14px]">
+                </div>
+                <!-- <div class="mb-20 flex items-center">
+                    <input type="checkbox" formControlName="is_divyang" id="is_divyang" class="mr-2">
+                    <label for="is_divyang" class="text-sm font-medium text-gray-700">Divyang (Person with Disability)</label>
+                </div> -->
+                <div class="mb-10">
+                    <label class="block mb-5 text-sm font-medium text-gray-700">Guardian Relation</label>
+                    <input type="text" formControlName="guardian_relation" class="rounded-lg h-20 md:h-30 lg:h-40 block w-full outline-0 pl-5 md:pl-10 lg:pl-[15px] text-black placeholder:text-secondary text-[12px] md:text-[13px] lg:text-[14px]">
+                </div>
+                <div class="mb-10">
+                    <label class="block mb-5 text-sm font-medium text-gray-700">Nominee Name</label>
+                    <input type="text" formControlName="nominee_name" class="rounded-lg h-20 md:h-30 lg:h-40 block w-full outline-0 pl-5 md:pl-10 lg:pl-[15px] text-black placeholder:text-secondary text-[12px] md:text-[13px] lg:text-[14px]">
+                </div>
+                <div class="mb-10">
+                    <label class="block mb-5 text-sm font-medium text-gray-700">Nominee Relation</label>
+                    <input type="text" formControlName="nominee_relation" class="rounded-lg h-20 md:h-30 lg:h-40 block w-full outline-0 pl-5 md:pl-10 lg:pl-[15px] text-black placeholder:text-secondary text-[12px] md:text-[13px] lg:text-[14px]">
+                </div>
+                <div class="mb-10">
+                    <label class="block mb-5 text-sm font-medium text-gray-700">Nominee Contact</label>
+                    <input type="text" formControlName="nominee_contact" class="rounded-lg h-20 md:h-30 lg:h-40 block w-full outline-0 pl-5 md:pl-10 lg:pl-[15px] text-black placeholder:text-secondary text-[12px] md:text-[13px] lg:text-[14px]">
+                </div>
+                <div class="mb-10">
+                    <label class="block mb-5 text-sm font-medium text-gray-700">Nominee Email</label>
+                    <input type="email" formControlName="nominee_email" class="rounded-lg h-20 md:h-30 lg:h-40 block w-full outline-0 pl-5 md:pl-10 lg:pl-[15px] text-black placeholder:text-secondary text-[12px] md:text-[13px] lg:text-[14px]">
+                </div>
+                <div class="mb-10">
+                    <label class="block mb-5 text-sm font-medium text-gray-700">Profile Image</label>
+                    <input type="file" formControlName="profile_image" class="block w-full text-[12px] md:text-[13px] lg:text-[14px]">
+                </div>
+                <button type="submit" class="text-black font-semibold text-[10px] md:text-[12px] lg:text-[14px] text-center block w-full rounded-full bg-warning px-10 py-5 md:py-[10px] lg:py-10 transition-all hover:bg-primary hover:text-white">
+                    Submit Now
+                </button>
+            </div>
+        </form>
+    </div>
+</div>
+

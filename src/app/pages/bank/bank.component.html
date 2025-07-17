@@ -1,0 +1,70 @@
+<div class="pb-10 md:pb-20 lg:pb-30 xl:pb-40 pt-130">
+    <div class="px-10 sm:px-10 container mx-auto">
+        <span class="block text-primary text-[15px] md:text-[16px] lg:text-[20px] lg:text-[20px] font-semibold">
+            Bank Details
+        </span>
+        <form [formGroup]="bankFormGroup" novalidate class="contents">
+            <div class="py-30 px-20 grid grid-cols-1 lg:grid-cols-2 bg-gray rounded-lg gap-25">
+                <div class="mb-10">
+                    <label class="block mb-5 text-sm font-medium text-gray-700">Bank Name</label>
+                    <input type="text" formControlName="bank_name" class="rounded-lg h-20 md:h-30 lg:h-40 block w-full outline-0 pl-5 md:pl-10 lg:pl-[15px] text-black placeholder:text-secondary text-[12px] md:text-[13px] lg:text-[14px]">
+                    <div *ngIf="bankFormGroup.get('bank_name')?.invalid && bankFormGroup.get('bank_name')?.touched" class="text-red-500 text-xs mt-1">
+                        Bank Name is required.
+                    </div>
+                </div>
+                <div class="mb-10">
+                    <label class="block mb-5 text-sm font-medium text-gray-700">Account Holder</label>
+                    <input type="text" formControlName="account_holder" class="rounded-lg h-20 md:h-30 lg:h-40 block w-full outline-0 pl-5 md:pl-10 lg:pl-[15px] text-black placeholder:text-secondary text-[12px] md:text-[13px] lg:text-[14px]">
+                    <div *ngIf="bankFormGroup.get('account_holder')?.invalid && bankFormGroup.get('account_holder')?.touched" class="text-red-500 text-xs mt-1">
+                        <span *ngIf="bankFormGroup.get('account_holder')?.errors?.['required']">Account Holder is required.</span>
+                        <span *ngIf="bankFormGroup.get('account_holder')?.errors?.['minlength']">Minimum 2 characters required.</span>
+                    </div>
+                </div>
+                <div class="mb-10">
+                    <label class="block mb-5 text-sm font-medium text-gray-700">Account Number</label>
+                    <input type="text" formControlName="account_number" class="rounded-lg h-20 md:h-30 lg:h-40 block w-full outline-0 pl-5 md:pl-10 lg:pl-[15px] text-black placeholder:text-secondary text-[12px] md:text-[13px] lg:text-[14px]">
+                    <div *ngIf="bankFormGroup.get('account_number')?.invalid && bankFormGroup.get('account_number')?.touched" class="text-red-500 text-xs mt-1">
+                        <span *ngIf="bankFormGroup.get('account_number')?.errors?.['required']">Account Number is required.</span>
+                        <span *ngIf="bankFormGroup.get('account_number')?.errors?.['pattern']">Enter a valid account number (9-18 digits).</span>
+                    </div>
+                </div>
+                <div class="mb-10">
+                    <label class="block mb-5 text-sm font-medium text-gray-700">IFSC Code</label>
+                    <input type="text" formControlName="ifsc_code" class="rounded-lg h-20 md:h-30 lg:h-40 block w-full outline-0 pl-5 md:pl-10 lg:pl-[15px] text-black placeholder:text-secondary text-[12px] md:text-[13px] lg:text-[14px]">
+                    <div *ngIf="bankFormGroup.get('ifsc_code')?.invalid && bankFormGroup.get('ifsc_code')?.touched" class="text-red-500 text-xs mt-1">
+                        <span *ngIf="bankFormGroup.get('ifsc_code')?.errors?.['required']">IFSC Code is required.</span>
+                        <span *ngIf="bankFormGroup.get('ifsc_code')?.errors?.['pattern']">Enter a valid IFSC code.</span>
+                    </div>
+                </div>
+                <div class="mb-10">
+                    <label class="block mb-5 text-sm font-medium text-gray-700">Branch Name</label>
+                    <input type="text" formControlName="branch_name" class="rounded-lg h-20 md:h-30 lg:h-40 block w-full outline-0 pl-5 md:pl-10 lg:pl-[15px] text-black placeholder:text-secondary text-[12px] md:text-[13px] lg:text-[14px]">
+                    <div *ngIf="bankFormGroup.get('branch_name')?.invalid && bankFormGroup.get('branch_name')?.touched" class="text-red-500 text-xs mt-1">
+                        Branch Name is required.
+                    </div>
+                </div>
+                <div class="mb-10">
+                    <label class="block mb-5 text-sm font-medium text-gray-700">Account Type</label>
+                    <input type="text" formControlName="account_type" class="rounded-lg h-20 md:h-30 lg:h-40 block w-full outline-0 pl-5 md:pl-10 lg:pl-[15px] text-black placeholder:text-secondary text-[12px] md:text-[13px] lg:text-[14px]">
+                    <div *ngIf="bankFormGroup.get('account_type')?.invalid && bankFormGroup.get('account_type')?.touched" class="text-red-500 text-xs mt-1">
+                        Account Type is required.
+                    </div>
+                </div>
+                <div class="mb-10">
+                    <label class="block mb-5 text-sm font-medium text-gray-700">MICR Code</label>
+                    <input type="text" formControlName="micr_code" class="rounded-lg h-20 md:h-30 lg:h-40 block w-full outline-0 pl-5 md:pl-10 lg:pl-[15px] text-black placeholder:text-secondary text-[12px] md:text-[13px] lg:text-[14px]">
+                    <div *ngIf="bankFormGroup.get('micr_code')?.invalid && bankFormGroup.get('micr_code')?.touched" class="text-red-500 text-xs mt-1">
+                        <span *ngIf="bankFormGroup.get('micr_code')?.errors?.['pattern']">Enter a valid 9-digit MICR code.</span>
+                    </div>
+                </div>
+                <br>
+                <button type="submit" class="text-black font-semibold text-[10px] md:text-[12px] lg:text-[14px] text-center block w-full rounded-full bg-warning px-10 py-5 md:py-[10px] lg:py-10 transition-all hover:bg-primary hover:text-white">
+                    Submit Now
+                </button>
+                <button type="button" class="text-white font-semibold text-[10px] md:text-[12px] lg:text-[14px] text-center block w-full rounded-full bg-primary px-10 py-5 md:py-[10px] lg:py-10 transition-all hover:bg-primary hover:text-white">
+                    Modify Bank Details
+                </button>
+            </div>
+        </form>
+    </div>
+</div>

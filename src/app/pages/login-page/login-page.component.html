@@ -1,0 +1,46 @@
+<div class="3xl:max-w-[1920px] pt-60 md:pt-80 lg:pt-0">
+    <div class="grid grid-cols-1 lg:grid-cols-2">
+        <div class="lg:h-[100vh] px-15 lg:px-25 xl:px-50 2xl:px-80 3xl:px-150">
+            <div class="lg:table lg:w-full lg:h-full sm:max-w-[540px] md:max-w-[600px] lg:max-w-[100%] sm:mx-auto">
+                <div class="lg:table-cell lg:align-middle">
+                    <a routerLink="/" class="inline-block mb-10 md:mb-15 lg:mb-20 text-[14px] md:text-[15px] font-medium relative pl-[16px]">
+                        <i class="ri-arrow-left-s-line absolute top-1/2 -translate-y-2/4 text-[22px] -left-[8px]"></i>
+                        Back to Home
+                    </a>
+                    <h3 class="text-black font-bold text-[20px] md:text-[22px] lg:text-[25px] md:max-w-[300px] mb-20 md:mb-30 leading-[1.3]">
+                        Log in to Your Vertex Account
+                    </h3>
+                    <form [formGroup]="loginFormGroup" (ngSubmit)="onSubmit()">
+                        <div class="mb-15 md:mb-20">
+                            <input type="text" formControlName="username" class="rounded-lg bg-gray h-50 md:h-60 lg:h-[58px] block w-full outline-0 pl-15 md:pl-25 pb-[2px] text-black placeholder:text-secondary text-[14px] md:text-[15px] lg:text-[16px]" placeholder="Mobile / User Id / Account Number">
+                        </div>
+                        <div class="mb-15 md:mb-20">
+                            <input type="password" formControlName="password" class="rounded-lg bg-gray h-50 md:h-60 lg:h-[58px] block w-full outline-0 pl-15 md:pl-25 pb-[2px] text-black placeholder:text-secondary text-[14px] md:text-[15px] lg:text-[16px]" placeholder="Password">
+                        </div>
+                        <button class="text-warning text-[14px] md:text-[16px] lg:text-[18px] font-semibold bg-primary block w-full rounded-full px-30 py-[14px] md:py-15 transition-all hover:bg-warning hover:text-black" type="submit">
+                            Login
+                        </button>
+                    </form>
+                    <div class="flex justify-between mt-15 md:mt-20">
+                        <!-- <a routerLink="/" class="inline-block text-[14px] md:text-[15px] lg:text-[16px] text-[#c74545] transition-all hover:underline">
+                            Forgot Password?
+                        </a> -->
+                        <span class="inline-block text-[14px] md:text-[15px] lg:text-[16px] text-black">
+                            New to Vertex?
+                            <a routerLink="/register" class="text-[#c74545] transition-all hover:underline">
+                                Sign up
+                            </a>
+                        </span>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+        <div
+            class="bg-primary mt-25 lg:mt-0 bg-center bg-cover bg-no-repeat h-full"
+            style="background-image: url(images/login.jpg);"
+        >
+            <img src="images/login.jpg" class="inline lg:hidden" alt="login-image">
+        </div>
+    </div>
+</div>

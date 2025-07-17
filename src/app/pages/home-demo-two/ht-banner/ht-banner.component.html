@@ -1,0 +1,31 @@
+<div class="pt-[4px] sm:pt-[105px] md:pt-[125px] pb-60 md:pb-80 lg:pb-0  relative z-1 bg-[#eff3f4] 2xl:bg-primary before:bg-[#eff3f4] before:left-0 before:top-0 before:bottom-0 before:-z-1 before:absolute before:w-[50%] 2xl:before:w-[45%] 3xl:before:w-[54%] before:hidden 2xl:before:block banner-area after:absolute after:right-[25%] after:top-[130px] after:w-[775px] after:h-[775px] after:rounded-full after:-z-2 after:hidden 2xl:after:block">
+	
+	<div class="px-10 sm:px-0 2xl:px-25 3xl:px-[80px] mx-auto  relative">
+	  
+<div class="custom-slider">
+	<div
+	  class="slide"
+	  *ngFor="let slide of slides; let i = index"
+	  [class.active]="i === currentSlideIndex"
+	  [ngStyle]="{'background-image': 'url(' + slide.image + ')'}">
+	  <div class="info">
+		<!-- <h3>{{ slide.title }}</h3> -->
+		<!-- <p>{{ slide.description }}</p> -->
+		<a *ngIf="slide.link" [href]="slide.link" class="btn">Know More</a>
+	  </div>
+	</div>
+  
+	<!-- Shadow image at the bottom -->
+	<img
+	  class="shadow-img"
+	  src="images/dark.png"
+	  alt="shadow">
+  
+	<!-- Navigation buttons -->
+	<div class="controls">
+	  <button (click)="previousSlide()">&lt;</button>
+	  <button (click)="nextSlide()">&gt;</button>
+	</div>
+  </div>
+	</div>
+	</div>

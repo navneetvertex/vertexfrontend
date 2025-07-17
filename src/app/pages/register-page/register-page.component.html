@@ -1,0 +1,174 @@
+<div class="3xl:max-w-[1920px] pt-60 md:pt-80 lg:pt-0">
+    <div class="grid grid-cols-1 lg:grid-cols-2">
+        <div class="lg:h-[100vh] px-15 lg:px-25 xl:px-50 2xl:px-80 3xl:px-150">
+            <div class="lg:table lg:w-full lg:h-full sm:max-w-[540px] md:max-w-[600px] lg:max-w-[100%] sm:mx-auto">
+                <div class="lg:table-cell lg:align-middle">
+                    <a routerLink="/" class="inline-block mb-10 md:mb-15 lg:mb-20 text-[14px] md:text-[15px] font-medium relative pl-[16px]">
+                        <i class="ri-arrow-left-s-line absolute top-1/2 -translate-y-2/4 text-[22px] -left-[8px]"></i>
+                        Back to Home
+                    </a>
+                    <h3 class="text-black font-bold text-[20px] md:text-[22px] lg:text-[25px] md:max-w-[300px] mb-20 md:mb-30 leading-[1.3]">
+                        Create Your Account
+                    </h3>
+                    <p *ngIf="errorMessages" class="text-danger text-[12px] md:text-[14px] lg:text-[15px] mb-20 md:mb-30">
+                        {{errorMessages | json}}
+                    </p>
+                    <form [formGroup]="registerFormGroup">
+                        <div class="mb-5 md:mb-10">
+                            <input type="text" formControlName="name" class="rounded-lg bg-gray h-50 md:h-60 lg:h-[58px] block w-full outline-0 pl-15 md:pl-25 pb-[2px] text-black placeholder:text-secondary text-[14px] md:text-[15px] lg:text-[16px]" placeholder="Name">
+                            <div *ngIf="registerFormGroup.get('name')?.touched && registerFormGroup.get('name')?.invalid" class="text-red-500 text-xs mt-1">
+                                <span *ngIf="registerFormGroup.get('name')?.errors?.['required']">Name is required.</span>
+                                <span *ngIf="registerFormGroup.get('name')?.errors?.['minlength']">Name must be at least 2 characters.</span>
+                            </div>
+                        </div>
+                        <div class="mb-5 md:mb-10">
+                            <input type="email" formControlName="email_id" class="rounded-lg bg-gray h-50 md:h-60 lg:h-[58px] block w-full outline-0 pl-15 md:pl-25 pb-[2px] text-black placeholder:text-secondary text-[14px] md:text-[15px] lg:text-[16px]" placeholder="Email address">
+                            <div *ngIf="registerFormGroup.get('email_id')?.touched && registerFormGroup.get('email_id')?.invalid" class="text-red-500 text-xs mt-1">
+                                <span *ngIf="registerFormGroup.get('email_id')?.errors?.['required']">Email is required.</span>
+                                <span *ngIf="registerFormGroup.get('email_id')?.errors?.['email']">Invalid email address.</span>
+                            </div>
+                        </div>
+                        <div class="mb-5 md:mb-10">
+                            <input type="text" formControlName="guardian_name" class="rounded-lg bg-gray h-50 md:h-60 lg:h-[58px] block w-full outline-0 pl-15 md:pl-25 pb-[2px] text-black placeholder:text-secondary text-[14px] md:text-[15px] lg:text-[16px]" placeholder="Guardian Name">
+                            <div *ngIf="registerFormGroup.get('guardian_name')?.touched && registerFormGroup.get('guardian_name')?.invalid" class="text-red-500 text-xs mt-1">
+                                <span *ngIf="registerFormGroup.get('guardian_name')?.errors?.['required']">Guardian name is required.</span>
+                            </div>
+                        </div>
+                        <div class="mb-5 md:mb-10">
+                            <input type="date" [max]="maxDate" formControlName="date_of_birth" class="rounded-lg bg-gray h-50 md:h-60 lg:h-[58px] block w-full outline-0 pl-15 md:pl-25 pb-[2px] text-black placeholder:text-secondary text-[14px] md:text-[15px] lg:text-[16px]" />
+                            <div *ngIf="registerFormGroup.get('date_of_birth')?.touched && registerFormGroup.get('date_of_birth')?.invalid" class="text-red-500 text-xs mt-1">
+                                <span *ngIf="registerFormGroup.get('date_of_birth')?.errors?.['required']">Date of birth is required.</span>
+                                <span *ngIf="registerFormGroup.get('date_of_birth')?.errors?.['underage']">You must be at least 18 years old to register.</span>
+                            </div>
+                        </div>
+                        <div class="mb-5 md:mb-10">
+                            <div class="flex items-center space-x-10">
+                                <label class="flex items-center text-black text-[14px] md:text-[15px] lg:text-[16px] font-normal">
+                                    <input type="radio" class="rounded-lg bg-gray h-50 md:h-60 lg:h-[18px] w-[18px] outline-0 accent-primary mr-2" formControlName="gender" value="Male" />
+                                    <span>Male</span>
+                                </label>
+                                
+                                <label class="flex items-center text-black text-[14px] md:text-[15px] lg:text-[16px] font-normal space-x-2">
+                                    <input type="radio" class="rounded-lg bg-gray h-50 md:h-60 lg:h-[18px] w-[18px] mr-2 outline-0 accent-primary" formControlName="gender" value="Female">
+                                    <span>Female</span>
+                                </label>
+                                <label class="flex items-center text-black text-[14px] md:text-[15px] lg:text-[16px] font-normal space-x-2">
+                                    <input type="radio" class="rounded-lg bg-gray h-50 md:h-60 lg:h-[18px] w-[18px] mr-2 outline-0 accent-primary" formControlName="gender" value="Other">
+                                    <span>Other</span>
+                                </label>
+                            </div>
+                            <div *ngIf="registerFormGroup.get('gender')?.touched && registerFormGroup.get('gender')?.invalid" class="text-red-500 text-xs mt-1">
+                                <span *ngIf="registerFormGroup.get('gender')?.errors?.['required']">Gender is required.</span>
+                            </div>
+                        </div>
+                        <div class="mb-5 md:mb-10 flex space-x-4">
+                            <div class="w-1/2">
+                                <input type="number" formControlName="mobile_number" class="rounded-lg bg-gray h-50 md:h-60 lg:h-[58px] w-full outline-0 pl-15 md:pl-25 pb-[2px] text-black placeholder:text-secondary text-[14px] md:text-[15px] lg:text-[16px]" placeholder="Mobile number">
+                                <div *ngIf="registerFormGroup.get('mobile_number')?.touched && registerFormGroup.get('mobile_number')?.invalid" class="text-red-500 text-xs mt-1">
+                                    <span *ngIf="registerFormGroup.get('mobile_number')?.errors?.['required']">Mobile number is required.</span>
+                                    <span *ngIf="registerFormGroup.get('mobile_number')?.errors?.['pattern']">Invalid mobile number.</span>
+                                </div>
+                            </div>
+                            <div class="w-1/2 ml-2" >
+                                <input type="number" formControlName="aadhar_number" class="rounded-lg bg-gray h-50 md:h-60 lg:h-[58px] w-full outline-0 pl-15 md:pl-25 pb-[2px] text-black placeholder:text-secondary text-[14px] md:text-[15px] lg:text-[16px]" placeholder="Aadhar number">
+                                <div *ngIf="registerFormGroup.get('aadhar_number')?.touched && registerFormGroup.get('aadhar_number')?.invalid" class="text-red-500 text-xs mt-1">
+                                    <span *ngIf="registerFormGroup.get('aadhar_number')?.errors?.['required']">Aadhar number is required.</span>
+                                    <span *ngIf="registerFormGroup.get('aadhar_number')?.errors?.['pattern']">Invalid Aadhar number.</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mb-5 md:mb-10 flex space-x-4">
+                            <div class="w-1/2">
+                                <input type="password" formControlName="password" class="rounded-lg bg-gray h-50 md:h-60 lg:h-[58px] w-full outline-0 pl-15 md:pl-25 pb-[2px] text-black placeholder:text-secondary text-[14px] md:text-[15px] lg:text-[16px]" placeholder="Password">
+                                <div *ngIf="registerFormGroup.get('password')?.touched && registerFormGroup.get('password')?.invalid" class="text-red-500 text-xs mt-1">
+                                    <span *ngIf="registerFormGroup.get('password')?.errors?.['required']">Password is required.</span>
+                                    <span *ngIf="registerFormGroup.get('password')?.errors?.['minlength']">Password must be at least 8 characters.</span>
+                                    <span *ngIf="registerFormGroup.get('password')?.errors?.['passwordStrength']">{{ registerFormGroup.get('password')?.errors?.['passwordStrength'] }}</span>
+                                </div>
+                            </div>
+                            <div class="w-1/2 ml-2">
+                                <input type="password" formControlName="confirm_password" class="rounded-lg bg-gray h-50 md:h-60 lg:h-[58px] w-full outline-0 pl-15 md:pl-25 pb-[2px] text-black placeholder:text-secondary text-[14px] md:text-[15px] lg:text-[16px]" placeholder="Confirm password">
+                                <div *ngIf="registerFormGroup.get('confirm_password')?.touched && registerFormGroup.get('confirm_password')?.invalid" class="text-red-500 text-xs mt-1">
+                                    <span *ngIf="registerFormGroup.get('confirm_password')?.errors?.['required']">Confirm password is required.</span>
+                                </div>
+                                <div *ngIf="registerFormGroup.errors?.['passwordMismatch'] && registerFormGroup.get('confirm_password')?.touched" class="text-red-500 text-xs mt-1">
+                                    Passwords do not match.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mb-5 md:mb-10 flex space-x-4">
+                            <div class="w-1/2">
+                                <input type="text" formControlName="area" class="rounded-lg bg-gray h-50 md:h-60 lg:h-[58px] w-full outline-0 pl-15 md:pl-25 pb-[2px] text-black placeholder:text-secondary text-[14px] md:text-[15px] lg:text-[16px]" placeholder="Area">
+                                <div *ngIf="registerFormGroup.get('area')?.touched && registerFormGroup.get('area')?.invalid" class="text-red-500 text-xs mt-1">
+                                    <span *ngIf="registerFormGroup.get('area')?.errors?.['required']">Area is required.</span>
+                                </div>
+                            </div>
+                            <div class="w-1/2 ml-2">
+                                <input type="number" (blur)="pincodechecker(registerFormGroup.get('pin_code')?.value)" formControlName="pin_code" class="rounded-lg bg-gray h-50 md:h-60 lg:h-[58px] w-full outline-0 pl-15 md:pl-25 pb-[2px] text-black placeholder:text-secondary text-[14px] md:text-[15px] lg:text-[16px]" placeholder="PIN Code">
+                                <div *ngIf="registerFormGroup.get('pin_code')?.touched && registerFormGroup.get('pin_code')?.invalid" class="text-red-500 text-xs mt-1">
+                                    <span *ngIf="registerFormGroup.get('pin_code')?.errors?.['required']">PIN Code is required.</span>
+                                    <span *ngIf="registerFormGroup.get('pin_code')?.errors?.['pattern']">PIN Code must be 6 digits.</span>
+                                    <span *ngIf="registerFormGroup.get('pin_code')?.errors?.['invalidPincode']">PIN Code is invalid.</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mb-5 md:mb-10 ">
+                            <label class="flex items-center text-black text-[14px] md:text-[15px] lg:text-[16px] font-normal space-x-2">
+                                <input type="checkbox" formControlName="terms_accepted" class="mr-2 rounded-lg bg-gray h-50 md:h-60 lg:h-[18px] w-[18px] outline-0 accent-primary">
+                                <span>I accept Terms & Conditions</span>
+                            </label>
+                            <div *ngIf="registerFormGroup.get('terms_accepted')?.touched && registerFormGroup.get('terms_accepted')?.invalid" class="text-red-500 text-xs mt-1">
+                                <span *ngIf="registerFormGroup.get('terms_accepted')?.errors?.['required'] || registerFormGroup.get('terms_accepted')?.errors?.['requiredTrue']">You must accept the terms.</span>
+                            </div>
+                        </div>
+                        <div class="mb-5 md:mb-10">
+                            <label class="text-black text-[14px] md:text-[15px] lg:text-[16px] font-normal mb-10 block">
+                                Payment Method
+                            </label>
+                            <div class="flex items-center space-x-10">
+                                <label class="flex items-center text-black text-[14px] md:text-[15px] lg:text-[16px] font-normal space-x-2">
+                                    <input type="radio" formControlName="payment_method" class="rounded-lg bg-gray h-50 md:h-60 lg:h-[18px]  mr-2 w-[18px] outline-0 accent-primary" value="cash">
+                                    <span>Cash</span>
+                                </label>
+                                <label class="flex items-center text-black text-[14px] md:text-[15px] lg:text-[16px] font-normal space-x-2">
+                                    <input type="radio" formControlName="payment_method" class="rounded-lg bg-gray h-50 md:h-60 lg:h-[18px]  mr-2 w-[18px] outline-0 accent-primary" value="gateway" >
+                                    <span>Payment Gateway</span>
+                                </label>
+                            </div>
+                            <div class="mb-5 md:mb-10 mt-10" *ngIf="registerFormGroup.get('payment_method')?.value === 'cash'">
+                                <input type="text" formControlName="pin" class="rounded-lg bg-gray h-50 md:h-60 lg:h-[58px] block w-full outline-0 pl-15 md:pl-25 pb-[2px] text-black placeholder:text-secondary text-[14px] md:text-[15px] lg:text-[16px]" placeholder="Enter PIN">
+                            </div>
+                            <div *ngIf="registerFormGroup.get('pin')?.touched && registerFormGroup.get('pin')?.invalid" class="text-red-500 text-xs mt-1">
+                                <span *ngIf="registerFormGroup.get('pin')?.errors?.['required']">PIN is required.</span>
+                            </div>
+                            <div *ngIf="registerFormGroup.get('payment_method')?.touched && registerFormGroup.get('payment_method')?.invalid" class="text-red-500 text-xs mt-1">
+                                <span *ngIf="registerFormGroup.get('payment_method')?.errors?.['required']">Payment method is required.</span>
+                            </div>
+                        </div>
+                        <button (click)="onSubmit()" class="text-warning text-[14px] md:text-[16px] lg:text-[18px] font-semibold bg-primary block w-full rounded-full px-30 py-[14px] md:py-15 transition-all hover:bg-warning hover:text-black" type="submit">
+                            Create Account
+                        </button>
+                    </form>
+                    <div class="flex justify-between mt-15 md:mt-20">
+                        <!-- <a routerLink="/" class="inline-block text-[14px] md:text-[15px] lg:text-[16px] text-[#c74545] transition-all hover:underline">
+                            Forgot Password?
+                        </a> -->
+                        <span class="inline-block text-[14px] md:text-[15px] lg:text-[16px] text-black">
+                            Already have account?
+                            <a routerLink="/login" class="text-[#c74545] transition-all hover:underline">
+                                Sign in
+                            </a>
+                        </span>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+        <div
+            class="bg-primary mt-25 lg:mt-0 bg-center bg-cover bg-no-repeat h-full"
+            style="background-image: url(images/register.jpg);"
+        >
+            <img src="images/register.jpg" class="inline lg:hidden" alt="register-image">
+        </div>
+    </div>
+</div>

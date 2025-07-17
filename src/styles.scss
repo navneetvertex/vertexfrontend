@@ -1,0 +1,45 @@
+@use 'ngx-toastr/toastr';
+
+/* You can add global styles to this file, and also import other style files */
+:root {
+    --primaryColor: #01354a;
+}
+
+// Tailwind CSS
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    margin: 0; 
+}
+
+.text-red-500 {
+    color: #f56565;
+}
+.mr-2 {
+    margin-right: 0.5rem;
+}
+
+.ml-2 {
+    margin-left: 0.5rem;
+}
+
+
+// input[type="date"]::-webkit-calendar-picker-indicator {
+//     background: transparent;
+//     bottom: 0;
+//     color: transparent;
+//     cursor: pointer;
+//     height: auto;
+//     left: 0;
+//     position: absolute;
+//     right: 0;
+//     top: 0;
+//     width: auto;
+// }

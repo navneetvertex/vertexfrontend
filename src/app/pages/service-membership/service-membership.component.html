@@ -1,0 +1,91 @@
+<!-- Page Title -->
+<div class="pt-[105px] md:pt-[135px] lg:pt-[150px] xl:pt-[188px] bg-gray">
+  <div class="px-10 sm:px-0 container mx-auto">
+    <div class="grid grid-cols-1 xl:grid-cols-2 gap-25">
+      <div class="xl:pl-40 2xl:pl-[98px] 2xl:mt-10 3xl:mt-[45px]">
+        <span class="block text-primary text-[15px] md:text-[16px] lg:text-[20px] font-semibold">
+          Membership
+        </span>
+        <h1 class="xl:max-w-[540px] font-bold text-black text-[25px] md:text-[35px] lg:text-[48px] xl:text-[57px] leading-[1.25] mt-[12px]">
+          Join Our Trusted Community
+        </h1>
+      </div>
+      <div class="text-center xl:pl-[95px] 2xl:pl-[105px]">
+        <img src="images/girl-with-card.png" class="inline" alt="girl-with-card-image">
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Tab Buttons -->
+<div class="membership-container">
+  <div class="tab-buttons flex flex-wrap justify-center gap-3 mb-6 mt-10">
+    <button
+      *ngFor="let tab of tabs; let i = index"
+      (click)="activeTab = i"
+      [ngClass]="{
+        'bg-primary text-white shadow-md': activeTab === i,
+        'bg-gray-100 text-gray-700 hover:bg-warning hover:text-black': activeTab !== i
+      }"
+      class="text_ed px-[15px] rounded-full text-sm font-medium transition-all duration-300"
+      style="padding: 16px;">
+      {{ tab.title }}
+    </button>
+  </div>
+
+  <!-- Tab Content -->
+  <div class="membership-container max-w-5xl mx-auto mt-[30px] px-6">
+    <div class="tab-content bg-white p-6 rounded-xl shadow-md">
+      <ng-container [ngSwitch]="activeTab">
+
+        <!-- Benefits -->
+        <div *ngSwitchCase="0" class="space-y-4">
+          <p class="text-gray-700 leading-relaxed">{{ membershipContent.benefits }}</p>
+        </div>
+
+        <!-- How to Join -->
+        <div *ngSwitchCase="1" class="space-y-4">
+          <ul class="list-disc pl-5 text-gray-700 space-y-1">
+            <li *ngFor="let item of membershipContent.howToJoin">
+              <strong>{{ item.label }}:</strong> {{ item.value }}
+            </li>
+          </ul>
+        </div>
+
+        <!-- Eligibility -->
+        <div *ngSwitchCase="2" class="space-y-4">
+          <p class="text-gray-700 leading-relaxed">{{ membershipContent.eligibility }}</p>
+        </div>
+
+        <!-- Membership Fee -->
+        <div *ngSwitchCase="3" class="space-y-4">
+          <table class="w-full table-auto border-collapse border border-gray-300 text-gray-800">
+            <tbody>
+              <tr class="border-b border-gray-300" *ngFor="let fee of membershipContent.fees">
+                <td class="py-2 pl-2">{{ fee.label }}</td>
+                <td class="py-2 pr-2 text-right font-semibold">₹ {{ fee.amount }}</td>
+              </tr>
+              <tr class="bg-gray-100">
+                <td class="py-2 pl-2 font-bold">Total</td>
+                <td class="py-2 pr-2 text-right font-bold text-primary">₹ {{ totalFee }}</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- Resignation -->
+        <div *ngSwitchCase="4" class="space-y-4">
+          <ul class="list-disc pl-5 text-gray-700 space-y-1">
+            <li *ngFor="let step of membershipContent.resignationSteps">{{ step }}</li>
+          </ul>
+        </div>
+
+      </ng-container>
+    </div>
+  </div>
+</div>
+
+<!-- Additional Sections -->
+<app-digital-banking></app-digital-banking>
+<app-subscription-comparison></app-subscription-comparison>
+<app-collecting-payments></app-collecting-payments>

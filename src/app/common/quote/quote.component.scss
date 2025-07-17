@@ -1,0 +1,169 @@
+.hidden {
+    &.block {
+        display: block !important;
+    }
+    // .homePageOne .about-Company-Section {
+    //     background: url(../images/about-company-bg-2.jpg) no-repeat center top;
+    //       background-size: auto;
+    //     background-size: cover;
+    //   }
+
+
+    .about-Company-Section .section-title h2 {
+        color: #222222;
+      }
+
+      .section-title h2 {
+        font-size: 30px;
+        font-weight: 500;
+        line-height: 30px;
+        color: #222222;
+        text-align: center;
+        margin-bottom: 0px;
+      }
+      .section-title {
+        position: relative;
+      }
+      .btmbdr {
+        width: 10%;
+        border-bottom: 1px dashed #787876;
+        color: #3a3a3a;
+        font-family: raleway;
+        font-size: 40px;
+        font-weight: 800;
+        text-align: center;
+        margin: 0 auto;
+        padding-bottom: 20px;
+        position: relative;
+        text-transform: capitalize;
+      }
+
+.section-title h2::before {
+    background: #df110c none repeat scroll 0 0;
+  
+    bottom: -4px;
+  
+    content: "";
+  
+    height: 10px;
+  
+    left: 50%;
+  
+    margin-left: -5px;
+  
+    position: absolute;
+  
+    width: 10px;
+  
+    z-index: 99;
+  
+  }
+    //  text bttom design 
+}
+// about us  lining
+.comp-kkgi89rs {
+  width: 118px;
+  height: 5px;
+}
+.comp-kkgi89rs {
+  --lnw: 3px;
+  --brd: 66,66,66;
+  --alpha-brd: 1;
+}
+
+.aVng1S {
+  border-top: var(--lnw,2px) solid rgba(var(--brd,var(--color_15,color_15)),var(--alpha-brd,1));
+  box-sizing: border-box;
+  height: 0;
+  position: relative;
+  margin: 0px 0px 53px calc((100% - 980px) * 0.5);
+  left: 432px;
+}
+.about-img img{
+  width: 100%;
+  height: auto;
+  padding: 20px;
+}
+.about-img img {
+  transition: transform 0.5s ease;
+}
+
+.about-img img:hover {
+  transform: scale(1.05) translateY(-5px);
+}
+// bottom read more
+.services-btn a {
+  display: inline-block;
+  padding: 12px 28px;
+  font-size: 16px;
+  font-weight: 600;
+  text-decoration: none;
+  color: white;
+  background: linear-gradient( to right, #011A41, #ffd15c);
+  border-radius: 30px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s ease-in-out;
+}
+
+.services-btn a:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25);
+  background: linear-gradient( to right, #011a41, #04A95C);
+}
+
+// nnnn
+
+element {
+  font-size: 16px;
+
+  line-height: 1.4em;
+
+}
+.MMl86N blockquote, .MMl86N div, .MMl86N h1, .MMl86N h2, .MMl86N h3, .MMl86N h4, .MMl86N h5, .MMl86N h6, .MMl86N p, .ku3DBC blockquote, .ku3DBC div, .ku3DBC h1, .ku3DBC h2, .ku3DBC h3, .ku3DBC h4, .ku3DBC h5, .ku3DBC h6, .ku3DBC p {
+  margin-block: 0;
+
+  margin: 0;
+
+}
+.font_8 {
+  font: var(--font_8);
+
+  color: rgb(var(--color_15));
+
+  letter-spacing: 0em;
+
+}
+
+#comp-kkgi18bn {
+  width: 629px;
+  height: auto;
+}
+.about-text {
+  font-family: "Libre Baskerville", serif;
+  font-size: 15px;
+  color: #374151;
+  line-height: 1.6;
+  letter-spacing: 0.2px;
+  margin-top: 1rem;
+}
+
+.about-text p {
+  font-weight: 600; /* Bold */
+  margin-bottom: 1rem;
+}
+
+.about-text .highlight-number {
+  font-size: 18px;
+  font-weight: bold;
+  color: #22378E;
+}
+
+@media (max-width: 767px) {
+  .about-text {
+    margin: 10px;
+  }
+
+  .about-img {
+    margin: 10px;
+  }
+}
