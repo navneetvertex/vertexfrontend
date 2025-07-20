@@ -7,7 +7,7 @@ import { SubscriptionComparisonComponent } from '../../common/subscription-compa
 import { CommonModule } from '@angular/common';
 @Component({
   selector: 'app-service-membership',
-  imports: [CommonModule, DigitalBankingComponent, CollectingPaymentsComponent, SubscriptionComparisonComponent],
+  imports: [RouterLink,CommonModule, DigitalBankingComponent, CollectingPaymentsComponent, SubscriptionComparisonComponent],
   standalone: true,
   templateUrl: './service-membership.component.html',
   styleUrl: './service-membership.component.scss'

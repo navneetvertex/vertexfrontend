@@ -1,22 +1,565 @@
-<div class="hidden sm:flex w-full top-bar justify-between items-center px-6 py-2 text-sm text-black bg-white border-b border-gray-200">
- <div class="col-md-6 col-lg-6 col-xs-12 hide_text">
-            <div class="logo-wrapper">
-                <a href="#" class="logo-link">
-                  <img src="images/white-logo.png"phone.png alt="logo" />
-                  <h3>Vertex Co-operative Society</h3>
-                </a>
-              </div>
-          </div>
+<!-- <div class=" sm:flex w-full top-bar justify-between items-center px-6 py-2 text-black bg-white border-b border-gray-200 ">
+
+  <div class="logo-col">
+    <div class="logo-wrapper">
+      <a href="#" class="logo-link">
+        <img src="images/white-logo.png" alt="logo" />
+        <h3>Vertex Co-operative Society</h3>
+      </a>
+    </div>
+  </div>
  
-      <div class="col-md-6 col-lg-6 col-xs-12 hide_text">
+      <div class="col-md-6 col-lg-6 col-xs-6 hide_text">
       <div class="col-md-4" id="topcontactdetail">
         <div class="col-md-12">
             <div class="calldiv">
-              <!-- <img src="images/phone.png" alt="call" style="width: 35px;height: 35px;padding: 2px;"/> -->
+            
                 <span style="margin: 0px 12px 0px 12px; float: right; font-weight: bold;margin-right: 32px;">Call Us: 011-45595003<br> 9:30am to 5:30pm (Mon – Sat)</span>
             </div>
         </div>
     </div> 
       </div>
 </div>
+   -->
+
+   <!-- <div class="navbar-collapse flex w-[800px] basis-auto justify-end">
+    <ul class="navbar-nav self-center flex-row ml-auto lg:flex">
+       
+        <li class="mx-15 lg:mx-[12px] xl:mx-15 2xl:mx-[17px] py-10 relative group last:mr-0 first:ml-0">
+            <a routerLink="/" class="text-white text-[15px] font-medium relative before:bottom-0 before:left-0 before:right-0 before:h-[1px] before:bg-black before:absolute before:transition-all before:w-0 group-hover:before:w-full" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" >
+                Home
+            </a>
+        </li>
+        <li class="mx-15 lg:mx-[12px] xl:mx-15 2xl:mx-[17px] py-10 relative group last:mr-0 first:ml-0">
+            <a href="javascript:void(0)" class="text-white text-[15px] font-medium relative before:bottom-0 before:left-0 before:right-0 before:h-[1px] before:bg-black before:absolute before:transition-all before:w-0 group-hover:before:w-full dropdown-toggle">
+                About Us
+            </a>
+            <ul class="absolute bg-white left-0 w-[270px] top-[100%] shadow-dropdown py-15 opacity-0 invisible transition-all group-hover:opacity-100 group-hover:visible">
+                <li class="py-[8px] px-20">
+                    <a routerLink="/about" class="block font-medium text-[15px] text-black transition-all hover:text-primary" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+                        Who are we?
+                    </a>
+                </li>
+                <li class="py-[8px] px-20">
+                    <a routerLink="/team" class="block font-medium text-[15px] text-black transition-all hover:text-primary" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+                        Team
+                    </a>
+                </li>
+                <li class="py-[8px] px-20">
+                    <a routerLink="/faq" class="block font-medium text-[15px] text-black transition-all hover:text-primary" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+                        FAQ
+                    </a>
+                </li>
+                <li class="py-[8px] px-20">
+                    <a routerLink="/privacy-policy" class="block font-medium text-[15px] text-black transition-all hover:text-primary" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+                        Privacy Policy
+                    </a>
+                </li>
+                <li class="py-[8px] px-20">
+                    <a routerLink="/terms-conditions" class="block font-medium text-[15px] text-black transition-all hover:text-primary" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+                        Terms & Conditions
+                    </a>
+                </li>
+            </ul>
+        </li>
+        <li class="mx-15 lg:mx-[12px] xl:mx-15 2xl:mx-[17px] py-10 relative group last:mr-0 first:ml-0">
+             <a href="javascript:void(0)" class="text-white text-[15px] font-medium relative before:bottom-0 before:left-0 before:right-0 before:h-[1px] before:bg-black before:absolute before:transition-all before:w-0 group-hover:before:w-full dropdown-toggle">
+                Services
+            </a>
+            <ul class="absolute bg-white left-0 w-[270px] top-[100%] shadow-dropdown py-15 opacity-0 invisible transition-all group-hover:opacity-100 group-hover:visible">
+                <li class="py-[8px] px-20">
+                    <a routerLink="/membership" class="block font-medium text-[15px] text-black transition-all hover:text-primary" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+                        Membership
+                    </a>
+                </li>
+                <li class="py-[8px] px-20">
+                    <a routerLink="/deposits-services" class="block font-medium text-[15px] text-black transition-all hover:text-primary" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+                        Deposits
+                    </a>
+                </li>
+                <li class="py-[8px] px-20">
+                    <a routerLink="/loans-services" class="block font-medium text-[15px] text-black transition-all hover:text-primary" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+                        Loans
+                    </a>
+                </li>
+            </ul>
+        </li>
+        <li class="mx-15 lg:mx-[12px] xl:mx-15 2xl:mx-[17px] py-10 relative group last:mr-0 first:ml-0">
+            <a routerLink="/calculator" class="text-white text-[15px] font-medium relative before:bottom-0 before:left-0 before:right-0 before:h-[1px] before:bg-black before:absolute before:transition-all before:w-0 group-hover:before:w-full" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+                Calculator
+            </a>
+        </li>
+        <li class="mx-15 lg:mx-[12px] xl:mx-15 2xl:mx-[17px] py-10 relative group last:mr-0 first:ml-0">
+            <a href="javascript:void(0)" class="text-white text-[15px] font-medium relative before:bottom-0 before:left-0 before:right-0 before:h-[1px] before:bg-black before:absolute before:transition-all before:w-0 group-hover:before:w-full dropdown-toggle">
+                Extras
+            </a>
+            <ul class="absolute bg-white left-0 w-[270px] top-[100%] shadow-dropdown py-15 opacity-0 invisible transition-all group-hover:opacity-100 group-hover:visible">
+                <li class="py-[8px] px-20">
+                    <a routerLink="/self-help-groups" class="block font-medium text-[15px] text-black transition-all hover:text-primary" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+                        SHG
+                    </a>
+                </li>
+                <li class="py-[8px] px-20">
+                    <a routerLink="/gifts" class="block font-medium text-[15px] text-black transition-all hover:text-primary" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+                        Gifts
+                    </a>
+                </li>
+                <li class="py-[8px] px-20">
+                    <a routerLink="/gallery" class="block font-medium text-[15px] text-black transition-all hover:text-primary" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+                        Gallery
+                    </a>
+                </li>
+                <li class="py-[8px] px-20">
+                    <a routerLink="/branches" class="block font-medium text-[15px] text-black transition-all hover:text-primary" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+                        Branches
+                    </a>
+                </li>
+                <li class="py-[8px] px-20">
+                    <a routerLink="/news-and-events" class="block font-medium text-[15px] text-black transition-all hover:text-primary" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+                        News & Events
+                    </a>
+                </li>
+                <li class="py-[8px] px-20">
+                    <a routerLink="/testimonials" class="block font-medium text-[15px] text-black transition-all hover:text-primary" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+                        Testimonials
+                    </a>
+                </li>
+            </ul>
+        </li>
+        <li class="mx-15 lg:mx-[12px] xl:mx-15 2xl:mx-[17px] py-10 relative group last:mr-0 first:ml-0">
+            <a routerLink="" class="text-white text-[15px] font-medium relative before:bottom-0 before:left-0 before:right-0 before:h-[1px] before:bg-black before:absolute before:transition-all before:w-0 group-hover:before:w-full" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+                Contact Us
+            </a>
+        </li>
+        <li class="mx-15 lg:mx-[12px] xl:mx-15 2xl:mx-[17px] py-10 relative group last:mr-0 first:ml-0">
+            <a routerLink="/silludaan" class="text-white text-[15px] font-medium relative before:bottom-0 before:left-0 before:right-0 before:h-[1px] before:bg-black before:absolute before:transition-all before:w-0 group-hover:before:w-full" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+                Skill Udaan
+            </a>
+        </li>
+        <li class="mx-15 lg:mx-[12px] xl:mx-15 2xl:mx-[17px] py-10 relative group last:mr-0 first:ml-0">
+            <a routerLink="/branches" class="text-white text-[15px] font-medium relative before:bottom-0 before:left-0 before:right-0 before:h-[1px] before:bg-black before:absolute before:transition-all before:w-0 group-hover:before:w-full" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+              Our Branch
+            </a>
+          </li>
+         -->
+        <!-- <li class="mx-15 lg:mx-[12px] xl:mx-15 2xl:mx-[17px] py-10 relative group last:mr-0 first:ml-0" *ngIf="isLoggedIn" >
+            <a href="javascript:void(0)" class="text-black text-[15px] font-medium relative before:bottom-0 before:left-0 before:right-0 before:h-[1px] before:bg-black before:absolute before:transition-all before:w-0 group-hover:before:w-full dropdown-toggle">
+                Hi, {{ userName }}!
+            </a>
+            <ul class="absolute bg-white left-0 w-[270px] top-[100%] shadow-dropdown py-15 opacity-0 invisible transition-all group-hover:opacity-100 group-hover:visible">
+                <li class="py-[8px] px-20">
+                    <a href="javascript:void(0)" class="block font-medium text-[15px] text-black transition-all hover:text-primary dropdown-toggle" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+                        Profile
+                    </a>
+                    <ul class="absolute bg-white -left-full w-[270px] top-0 shadow-dropdown py-15 opacity-0 invisible transition-all">
+                        <li class="py-[8px] px-20">
+                            <a routerLink="/kyc" class="block font-medium text-[15px] text-black transition-all hover:text-primary" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+                                Know your Customer
+                            </a>
+                        </li>
+                        <li class="py-[8px] px-20">
+                            <a routerLink="/profile" class="block font-medium text-[15px] text-black transition-all hover:text-primary" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+                                Profile Settings
+                            </a>
+                        </li>
+                        <div class="navbar-collapse flex w-[800px] basis-auto justify-end">
+                          <ul class="navbar-nav self-center flex-row ml-auto lg:flex">
+                             
+                              <li class="mx-15 lg:mx-[12px] xl:mx-15 2xl:mx-[17px] py-10 relative group last:mr-0 first:ml-0">
+                                  <a routerLink="/" class="text-white text-[15px] font-medium relative before:bottom-0 before:left-0 before:right-0 before:h-[1px] before:bg-black before:absolute before:transition-all before:w-0 group-hover:before:w-full" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" >
+                                      Home
+                                  </a>
+                              </li>
+                              <li class="mx-15 lg:mx-[12px] xl:mx-15 2xl:mx-[17px] py-10 relative group last:mr-0 first:ml-0">
+                                  <a href="javascript:void(0)" class="text-white text-[15px] font-medium relative before:bottom-0 before:left-0 before:right-0 before:h-[1px] before:bg-black before:absolute before:transition-all before:w-0 group-hover:before:w-full dropdown-toggle">
+                                      About Us
+                                  </a>
+                                  <ul class="absolute bg-white left-0 w-[270px] top-[100%] shadow-dropdown py-15 opacity-0 invisible transition-all group-hover:opacity-100 group-hover:visible">
+                                      <li class="py-[8px] px-20">
+                                          <a routerLink="/about" class="block font-medium text-[15px] text-black transition-all hover:text-primary" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+                                              Who are we?
+                                          </a>
+                                      </li>
+                                      <li class="py-[8px] px-20">
+                                          <a routerLink="/team" class="block font-medium text-[15px] text-black transition-all hover:text-primary" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+                                              Team
+                                          </a>
+                                      </li>
+                                      <li class="py-[8px] px-20">
+                                          <a routerLink="/faq" class="block font-medium text-[15px] text-black transition-all hover:text-primary" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+                                              FAQ
+                                          </a>
+                                      </li>
+                                      <li class="py-[8px] px-20">
+                                          <a routerLink="/privacy-policy" class="block font-medium text-[15px] text-black transition-all hover:text-primary" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+                                              Privacy Policy
+                                          </a>
+                                      </li>
+                                      <li class="py-[8px] px-20">
+                                          <a routerLink="/terms-conditions" class="block font-medium text-[15px] text-black transition-all hover:text-primary" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+                                              Terms & Conditions
+                                          </a>
+                                      </li>
+                                  </ul>
+                              </li>
+                              <li class="mx-15 lg:mx-[12px] xl:mx-15 2xl:mx-[17px] py-10 relative group last:mr-0 first:ml-0">
+                                   <a href="javascript:void(0)" class="text-white text-[15px] font-medium relative before:bottom-0 before:left-0 before:right-0 before:h-[1px] before:bg-black before:absolute before:transition-all before:w-0 group-hover:before:w-full dropdown-toggle">
+                                      Services
+                                  </a>
+                                  <ul class="absolute bg-white left-0 w-[270px] top-[100%] shadow-dropdown py-15 opacity-0 invisible transition-all group-hover:opacity-100 group-hover:visible">
+                                      <li class="py-[8px] px-20">
+                                          <a routerLink="/membership" class="block font-medium text-[15px] text-black transition-all hover:text-primary" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+                                              Membership
+                                          </a>
+                                      </li>
+                                      <li class="py-[8px] px-20">
+                                          <a routerLink="/deposits-services" class="block font-medium text-[15px] text-black transition-all hover:text-primary" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+                                              Deposits
+                                          </a>
+                                      </li>
+                                      <li class="py-[8px] px-20">
+                                          <a routerLink="/loans-services" class="block font-medium text-[15px] text-black transition-all hover:text-primary" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+                                              Loans
+                                          </a>
+                                      </li>
+                                  </ul>
+                              </li>
+                              <li class="mx-15 lg:mx-[12px] xl:mx-15 2xl:mx-[17px] py-10 relative group last:mr-0 first:ml-0">
+                                  <a routerLink="/calculator" class="text-white text-[15px] font-medium relative before:bottom-0 before:left-0 before:right-0 before:h-[1px] before:bg-black before:absolute before:transition-all before:w-0 group-hover:before:w-full" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+                                      Calculator
+                                  </a>
+                              </li>
+                              <li class="mx-15 lg:mx-[12px] xl:mx-15 2xl:mx-[17px] py-10 relative group last:mr-0 first:ml-0">
+                                  <a href="javascript:void(0)" class="text-white text-[15px] font-medium relative before:bottom-0 before:left-0 before:right-0 before:h-[1px] before:bg-black before:absolute before:transition-all before:w-0 group-hover:before:w-full dropdown-toggle">
+                                      Extras
+                                  </a>
+                                  <ul class="absolute bg-white left-0 w-[270px] top-[100%] shadow-dropdown py-15 opacity-0 invisible transition-all group-hover:opacity-100 group-hover:visible">
+                                      <li class="py-[8px] px-20">
+                                          <a routerLink="/self-help-groups" class="block font-medium text-[15px] text-black transition-all hover:text-primary" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+                                              SHG
+                                          </a>
+                                      </li>
+                                      <li class="py-[8px] px-20">
+                                          <a routerLink="/gifts" class="block font-medium text-[15px] text-black transition-all hover:text-primary" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+                                              Gifts
+                                          </a>
+                                      </li>
+                                      <li class="py-[8px] px-20">
+                                          <a routerLink="/gallery" class="block font-medium text-[15px] text-black transition-all hover:text-primary" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+                                              Gallery
+                                          </a>
+                                      </li>
+                                      <li class="py-[8px] px-20">
+                                          <a routerLink="/branches" class="block font-medium text-[15px] text-black transition-all hover:text-primary" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+                                              Branches
+                                          </a>
+                                      </li>
+                                      <li class="py-[8px] px-20">
+                                          <a routerLink="/news-and-events" class="block font-medium text-[15px] text-black transition-all hover:text-primary" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+                                              News & Events
+                                          </a>
+                                      </li>
+                                      <li class="py-[8px] px-20">
+                                          <a routerLink="/testimonials" class="block font-medium text-[15px] text-black transition-all hover:text-primary" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+                                              Testimonials
+                                          </a>
+                                      </li>
+                                  </ul>
+                              </li>
+                              <li class="mx-15 lg:mx-[12px] xl:mx-15 2xl:mx-[17px] py-10 relative group last:mr-0 first:ml-0">
+                                  <a routerLink="" class="text-white text-[15px] font-medium relative before:bottom-0 before:left-0 before:right-0 before:h-[1px] before:bg-black before:absolute before:transition-all before:w-0 group-hover:before:w-full" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+                                      Contact Us
+                                  </a>
+                              </li>
+                              <li class="mx-15 lg:mx-[12px] xl:mx-15 2xl:mx-[17px] py-10 relative group last:mr-0 first:ml-0">
+                                  <a routerLink="/silludaan" class="text-white text-[15px] font-medium relative before:bottom-0 before:left-0 before:right-0 before:h-[1px] before:bg-black before:absolute before:transition-all before:w-0 group-hover:before:w-full" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+                                      Skill Udaan
+                                  </a>
+                              </li>
+                              <li class="mx-15 lg:mx-[12px] xl:mx-15 2xl:mx-[17px] py-10 relative group last:mr-0 first:ml-0">
+                                  <a routerLink="/branches" class="text-white text-[15px] font-medium relative before:bottom-0 before:left-0 before:right-0 before:h-[1px] before:bg-black before:absolute before:transition-all before:w-0 group-hover:before:w-full" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+                                    Our Branch
+                                  </a>
+                                </li>
+                              <li class="mx-15 lg:mx-[12px] xl:mx-15 2xl:mx-[17px] py-10 relative group last:mr-0 first:ml-0" *ngIf="isLoggedIn" >
+                                  <a href="javascript:void(0)" class="text-black text-[15px] font-medium relative before:bottom-0 before:left-0 before:right-0 before:h-[1px] before:bg-black before:absolute before:transition-all before:w-0 group-hover:before:w-full dropdown-toggle">
+                                      Hi, {{ userName }}!
+                                  </a>
+                                  <ul class="absolute bg-white left-0 w-[270px] top-[100%] shadow-dropdown py-15 opacity-0 invisible transition-all group-hover:opacity-100 group-hover:visible">
+                                      <li class="py-[8px] px-20">
+                                          <a href="javascript:void(0)" class="block font-medium text-[15px] text-black transition-all hover:text-primary dropdown-toggle" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+                                              Profile
+                                          </a>
+                                          <ul class="absolute bg-white -left-full w-[270px] top-0 shadow-dropdown py-15 opacity-0 invisible transition-all">
+                                              <li class="py-[8px] px-20">
+                                                  <a routerLink="/kyc" class="block font-medium text-[15px] text-black transition-all hover:text-primary" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+                                                      Know your Customer
+                                                  </a>
+                                              </li>
+                                              <li class="py-[8px] px-20">
+                                                  <a routerLink="/profile" class="block font-medium text-[15px] text-black transition-all hover:text-primary" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+                                                      Profile Settings
+                                                  </a>
+                                              </li>
+                                              <li class="py-[8px] px-20">
+                                                  <a routerLink="/address" class="block font-medium text-[15px] text-black transition-all hover:text-primary" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+                                                      Addresss
+                                                  </a>
+                                              </li>
+                                              <li class="py-[8px] px-20">
+                                                  <a routerLink="/bank" class="block font-medium text-[15px] text-black transition-all hover:text-primary" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+                                                      Bank
+                                                  </a>
+                                              </li>
+                                          </ul>
+                                      </li>
+                                      <li class="py-[8px] px-20">
+                                          <a href="javascript:void(0)" class="block font-medium text-[15px] text-black transition-all hover:text-primary dropdown-toggle" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+                                              Loans
+                                          </a>
+                                          <ul class="absolute bg-white -left-full w-[270px] top-0 shadow-dropdown py-15 opacity-0 invisible transition-all">
+                                              <li class="py-[8px] px-20">
+                                                  <a routerLink="/apply-loan" class="block font-medium text-[15px] text-black transition-all hover:text-primary" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+                                                      Apply Loan
+                                                  </a>
+                                              </li>
+                                              <li class="py-[8px] px-20">
+                                                  <a routerLink="/manage-loans" class="block font-medium text-[15px] text-black transition-all hover:text-primary" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+                                                      Manage Loans
+                                                  </a>
+                                              </li>
+                                          </ul>
+                                      </li>
+                                      <li class="py-[8px] px-20">
+                                           <a href="javascript:void(0)" class="block font-medium text-[15px] text-black transition-all hover:text-primary dropdown-toggle" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+                                              Deposits
+                                          </a>
+                                          <ul class="absolute bg-white -left-full w-[270px] top-0 shadow-dropdown py-15 opacity-0 invisible transition-all">
+                                              <li class="py-[8px] px-20">
+                                                   <a href="javascript:void(0)" class="block font-medium text-[15px] text-black transition-all hover:text-primary dropdown-toggle" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+                                                      Compulsory Deposits
+                                                  </a>
+                                                  <ul class="absolute bg-white left-full w-[270px] top-0 shadow-dropdown py-15 opacity-0 invisible transition-all">
+                                                      <li class="py-[8px] px-20">
+                                                          <a  routerLink="/manage-compulsary-deposits" class="block font-medium text-[15px] text-black transition-all hover:text-primary" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+                                                              Manage Deposits
+                                                          </a>
+                                                      </li>
+                                                      <li class="py-[8px] px-20 relative">
+                                                          <a href="/transanction-compulsary-deposits" class="block font-medium text-[15px] text-black transition-all hover:text-primary" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+                                                              Transaction History
+                                                          </a>
+                                                      </li>
+                                                  </ul>
+                                              </li>
+                                              <li class="py-[8px] px-20">
+                                                   <a href="javascript:void(0)" class="block font-medium text-[15px] text-black transition-all hover:text-primary dropdown-toggle" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+                                                      Recurring Deposits
+                                                  </a>
+                                                  <ul class="absolute bg-white left-full w-[270px] top-0 shadow-dropdown py-15 opacity-0 invisible transition-all">
+                                                      <li class="py-[8px] px-20">
+                                                          <a routerLink="/manage-recurring-deposits" class="block font-medium text-[15px] text-black transition-all hover:text-primary" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+                                                              Manage Deposits
+                                                          </a>
+                                                      </li>
+                                                      <li class="py-[8px] px-20 relative">
+                                                          <a routerLink="/transanction-recurring-deposits" class="block font-medium text-[15px] text-black transition-all hover:text-primary" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+                                                              Transaction History
+                                                          </a>
+                                                      </li>
+                                                  </ul>
+                                              </li>
+                                              <li class="py-[8px] px-20">
+                                                   <a href="javascript:void(0)" class="block font-medium text-[15px] text-black transition-all hover:text-primary dropdown-toggle" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+                                                      Fixed Deposits
+                                                  </a>
+                                                  <ul class="absolute bg-white left-full w-[270px] top-0 shadow-dropdown py-15 opacity-0 invisible transition-all">
+                                                      <li class="py-[8px] px-20">
+                                                          <a routerLink="/manage-fixed-deposits" class="block font-medium text-[15px] text-black transition-all hover:text-primary" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+                                                              Manage Deposits
+                                                          </a>
+                                                      </li>
+                                                      <li class="py-[8px] px-20 relative">
+                                                          <a routerLink="/transanction-fixed-deposits" class="block font-medium text-[15px] text-black transition-all hover:text-primary" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+                                                              Transaction History
+                                                          </a>
+                                                      </li>
+                                                  </ul>
+                                              </li>
+                                          </ul>
+                                      </li>
+                                      <li class="py-[8px] px-20">
+                                          <a href="javascript:void(0)" class="block font-medium text-[15px] text-black transition-all hover:text-primary dropdown-toggle" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+                                              Credit Card
+                                          </a>
+                                          <ul class="absolute bg-white -left-full w-[270px] top-0 shadow-dropdown py-15 opacity-0 invisible transition-all">
+                                              <li class="py-[8px] px-20">
+                                                  <a routerLink="/credit-card" class="block font-medium text-[15px] text-black transition-all hover:text-primary" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+                                                      Credit Card
+                                                  </a>
+                                              </li>
+                                              <li class="py-[8px] px-20">
+                                                  <a routerLink="/transanction-history" class="block font-medium text-[15px] text-black transition-all hover:text-primary" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+                                                      Transaction History
+                                                  </a>
+                                              </li>
+                                          </ul>
+                                      </li>
+                                      
+                                  </ul>
+                              </li>
+                        
+                          </ul>
+                          <div style="display: hide;"  class="other-options self-center relative lg:ml-10 before:bg-black before:h-[18px] before:w-[1px] before:absolute before:-left-[22px] before:top-[8px] before:opacity-[.08]">
+                              <a *ngIf="!isLoggedIn" href="https://member.vertexsociety.com/account/login" target="_blank" class="ml-20 2xl:ml-[23px] text-white font-medium text-[14px] md:text-[15px] inline-block transition-all hover:text-primary">
+                                  Login
+                              </a>
+                              <a *ngIf="!isLoggedIn" href="https://member.vertexsociety.com/account/signup" target="_blank" class="ml-20 2xl:ml-[23px] btn inline-block text-[14px] md:text-[15px] text-black bg-warning font-medium px-[18px] py-5 rounded-full transition-all hover:bg-white">
+                                  <span class="relative -top-[1px]">
+                                      Register
+                                  </span>
+                              </a>
+                              <a *ngIf="isLoggedIn" class="ml-20 2xl:ml-[23px] text-black font-medium text-[14px] md:text-[15px] inline-block transition-all hover:text-primary">
+                                  
+                              </a>
+                              <a *ngIf="isLoggedIn" class="ml-20 2xl:ml-[23px] text-black font-medium text-[14px] md:text-[15px] inline-block transition-all hover:text-primary">
+                                  
+                              </a>
+                              <a *ngIf="isLoggedIn" (click)="logout()" class="ml-20 2xl:ml-[23px] btn inline-block text-[14px] md:text-[15px] text-black bg-warning font-medium px-[18px] py-5 rounded-full transition-all hover:bg-white">
+                                  <span class="relative -top-[1px]">
+                                      Logout
+                                  </span>
+                              </a>
+                          </div>
+                        </div>     <li class="py-[8px] px-20">
+                            <a routerLink="/address" class="block font-medium text-[15px] text-black transition-all hover:text-primary" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+                                Addresss
+                            </a>
+                        </li>
+                        <li class="py-[8px] px-20">
+                            <a routerLink="/bank" class="block font-medium text-[15px] text-black transition-all hover:text-primary" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+                                Bank
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="py-[8px] px-20">
+                    <a href="javascript:void(0)" class="block font-medium text-[15px] text-black transition-all hover:text-primary dropdown-toggle" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+                        Loans
+                    </a>
+                    <ul class="absolute bg-white -left-full w-[270px] top-0 shadow-dropdown py-15 opacity-0 invisible transition-all">
+                        <li class="py-[8px] px-20">
+                            <a routerLink="/apply-loan" class="block font-medium text-[15px] text-black transition-all hover:text-primary" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+                                Apply Loan
+                            </a>
+                        </li>
+                        <li class="py-[8px] px-20">
+                            <a routerLink="/manage-loans" class="block font-medium text-[15px] text-black transition-all hover:text-primary" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+                                Manage Loans
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="py-[8px] px-20">
+                     <a href="javascript:void(0)" class="block font-medium text-[15px] text-black transition-all hover:text-primary dropdown-toggle" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+                        Deposits
+                    </a>
+                    <ul class="absolute bg-white -left-full w-[270px] top-0 shadow-dropdown py-15 opacity-0 invisible transition-all">
+                        <li class="py-[8px] px-20">
+                             <a href="javascript:void(0)" class="block font-medium text-[15px] text-black transition-all hover:text-primary dropdown-toggle" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+                                Compulsory Deposits
+                            </a>
+                            <ul class="absolute bg-white left-full w-[270px] top-0 shadow-dropdown py-15 opacity-0 invisible transition-all">
+                                <li class="py-[8px] px-20">
+                                    <a  routerLink="/manage-compulsary-deposits" class="block font-medium text-[15px] text-black transition-all hover:text-primary" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+                                        Manage Deposits
+                                    </a>
+                                </li>
+                                <li class="py-[8px] px-20 relative">
+                                    <a href="/transanction-compulsary-deposits" class="block font-medium text-[15px] text-black transition-all hover:text-primary" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+                                        Transaction History
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="py-[8px] px-20">
+                             <a href="javascript:void(0)" class="block font-medium text-[15px] text-black transition-all hover:text-primary dropdown-toggle" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+                                Recurring Deposits
+                            </a>
+                            <ul class="absolute bg-white left-full w-[270px] top-0 shadow-dropdown py-15 opacity-0 invisible transition-all">
+                                <li class="py-[8px] px-20">
+                                    <a routerLink="/manage-recurring-deposits" class="block font-medium text-[15px] text-black transition-all hover:text-primary" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+                                        Manage Deposits
+                                    </a>
+                                </li>
+                                <li class="py-[8px] px-20 relative">
+                                    <a routerLink="/transanction-recurring-deposits" class="block font-medium text-[15px] text-black transition-all hover:text-primary" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+                                        Transaction History
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="py-[8px] px-20">
+                             <a href="javascript:void(0)" class="block font-medium text-[15px] text-black transition-all hover:text-primary dropdown-toggle" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+                                Fixed Deposits
+                            </a>
+                            <ul class="absolute bg-white left-full w-[270px] top-0 shadow-dropdown py-15 opacity-0 invisible transition-all">
+                                <li class="py-[8px] px-20">
+                                    <a routerLink="/manage-fixed-deposits" class="block font-medium text-[15px] text-black transition-all hover:text-primary" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+                                        Manage Deposits
+                                    </a>
+                                </li>
+                                <li class="py-[8px] px-20 relative">
+                                    <a routerLink="/transanction-fixed-deposits" class="block font-medium text-[15px] text-black transition-all hover:text-primary" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+                                        Transaction History
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li class="py-[8px] px-20">
+                    <a href="javascript:void(0)" class="block font-medium text-[15px] text-black transition-all hover:text-primary dropdown-toggle" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+                        Credit Card
+                    </a>
+                    <ul class="absolute bg-white -left-full w-[270px] top-0 shadow-dropdown py-15 opacity-0 invisible transition-all">
+                        <li class="py-[8px] px-20">
+                            <a routerLink="/credit-card" class="block font-medium text-[15px] text-black transition-all hover:text-primary" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+                                Credit Card
+                            </a>
+                        </li>
+                        <li class="py-[8px] px-20">
+                            <a routerLink="/transanction-history" class="block font-medium text-[15px] text-black transition-all hover:text-primary" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+                                Transaction History
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                
+            </ul>
+        </li>
   
+    </ul>
+    <div style="display: hide;"  class="other-options self-center relative lg:ml-10 before:bg-black before:h-[18px] before:w-[1px] before:absolute before:-left-[22px] before:top-[8px] before:opacity-[.08]">
+        <a *ngIf="!isLoggedIn" href="https://member.vertexsociety.com/account/login" target="_blank" class="ml-20 2xl:ml-[23px] text-white font-medium text-[14px] md:text-[15px] inline-block transition-all hover:text-primary">
+            Login
+        </a>
+        <a *ngIf="!isLoggedIn" href="https://member.vertexsociety.com/account/signup" target="_blank" class="ml-20 2xl:ml-[23px] btn inline-block text-[14px] md:text-[15px] text-black bg-warning font-medium px-[18px] py-5 rounded-full transition-all hover:bg-white">
+            <span class="relative -top-[1px]">
+                Register
+            </span>
+        </a>
+        <a *ngIf="isLoggedIn" class="ml-20 2xl:ml-[23px] text-black font-medium text-[14px] md:text-[15px] inline-block transition-all hover:text-primary">
+            
+        </a>
+        <a *ngIf="isLoggedIn" class="ml-20 2xl:ml-[23px] text-black font-medium text-[14px] md:text-[15px] inline-block transition-all hover:text-primary">
+            
+        </a>
+        <a *ngIf="isLoggedIn" (click)="logout()" class="ml-20 2xl:ml-[23px] btn inline-block text-[14px] md:text-[15px] text-black bg-warning font-medium px-[18px] py-5 rounded-full transition-all hover:bg-white">
+            <span class="relative -top-[1px]">
+                Logout
+            </span>
+        </a>
+    </div>
+  </div>  -->
+

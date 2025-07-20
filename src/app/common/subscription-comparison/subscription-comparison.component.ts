@@ -4,7 +4,7 @@ import { Router } from '@angular/router';
 
 @Component({
     selector: 'app-subscription-comparison',
-    imports: [],
+    imports: [NgClass],
     standalone: true,
     templateUrl: './subscription-comparison.component.html',
     styleUrls: ['./subscription-comparison.component.scss']

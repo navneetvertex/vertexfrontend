@@ -11,15 +11,33 @@ import { AuthService } from '../../core/services/auth.service';
     styleUrls: ['./navbar.component.scss']  
 })
 export class NavbarComponent implements OnInit {
-    isDrawerOpen: boolean = false;
+    isVisible = false; 
+    isDrawerOpen = false;
+    isMobileDropdownOpen = false;
+    isDesktopDropdownOpen = false; // <-- Add this line to fix the error
+    openDropdown: string | null = null;
 
+    toggleDropdown(name: string) {
+      this.openDropdown = this.openDropdown === name ? null : name;
+    }
     toggleDrawer() {
       this.isDrawerOpen = !this.isDrawerOpen;
+      if (!this.isDrawerOpen) {
+        this.isMobileDropdownOpen = false;
+      }
     }
-    
-    closeDrawer() {
-      this.isDrawerOpen = false;
+  
+    toggleMobileDropdown() {
+      this.isMobileDropdownOpen = !this.isMobileDropdownOpen;
     }
+    // isDrawerOpen: boolean = false;
+
+    // toggleDrawer() {
+    //   this.isDrawerOpen = !this.isDrawerOpen;
+    // } 
+    // closeDrawer() {
+    //   this.isDrawerOpen = false;
+    // }
     constructor(
         public router: Router,
         private authService: AuthService
@@ -38,8 +56,16 @@ export class NavbarComponent implements OnInit {
                 this.userName = '';
             }
         });
-    }
 
+        // mobile show
+        this.checkIfMobile();
+    }
+    checkIfMobile() {
+      if (typeof window !== 'undefined') {
+        return window.innerWidth < 768;
+      }
+      return false; // or default fallback
+    }
     logout() {
         this.authService.logout()
     }
@@ -66,6 +92,6 @@ export class NavbarComponent implements OnInit {
         }
     }
     // new code
-    
+ 
 
 }

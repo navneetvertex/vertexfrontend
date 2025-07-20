@@ -12,22 +12,22 @@ export class BranchesComponent {
 
   branches = [
     {
-      name: 'Noida Sector 62',
-      address: 'IT Park Road, Tower B, Sector 62, Noida, UP-201301',
-      phone: '9654060232',
+      name: 'Pandav Nagar, East Delhi',
+      address: ' Plot no - 53, 3rd floor, Main road,PIN code - 110092',
+      phone: '+91-9319208666',
       open: false
     },
   
     {
-      name: 'Noida Sector 62',
-      address: 'IT Park Road, Tower B, Sector 62, Noida, UP-201301',
-      phone: '9876543210',
+      name: 'Pandav Nagar, East Delhi',
+      address: ' Plot no - 53, 3rd floor, Main road,PIN code - 110092',
+      phone: '+91-9319208666',
       open: false
     },
     {
-      name: 'Noida Sector 62',
-      address: 'IT Park Road, Tower B, Sector 62, Noida, UP-201301',
-      phone: '9990011223',
+      name: 'Pandav Nagar, East Delhi',
+      address: ' Plot no - 53, 3rd floor, Main road,PIN code - 110092',
+      phone: '+91-9319208666',
       open: false
     },
     

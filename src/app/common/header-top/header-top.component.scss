@@ -1,4 +1,4 @@
-//   nav op design
+  nav op design
 .phone-icon {
     color: #df120d;
   font-size: 24px;
@@ -75,8 +75,28 @@
     inset: 0;
     z-index: -1;
   }
-  .top-bar {
-    @media (max-width: 639px) {
-      display: none !important;
+  .h_60{
+    height: 60px;
+  }
+  .logo-col {
+    text-align: right;
+  
+    @media (min-width: 640px) {
+      text-align: left;
     }
+  }
+  .hide_text {
+    @media (max-width: 639px) {
+       display: none !important;
+    }
+  }
+  @media (max-width: 640px) {
+    .h-60px {
+      height: 0px !important;
+    }
+    .h_60{
+      height: 0px;
+    }
+   
+
   }

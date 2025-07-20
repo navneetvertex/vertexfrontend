@@ -3,9 +3,10 @@
 <!-- Wrap header‑top and navbar together in one div -->
 <div [ngClass]="{ 'hidden': router.url === '/login' || router.url === '/register' }">
 
-    <app-header-top class="fixed top-0 left-0 w-full z-50 h-[60px]"></app-header-top>
+    <app-header-top class="fixed top-0 left-0 w-full z-50 h-[0px]"></app-header-top>
   </div>
-  <app-navbar class="fixed top-[60px] left-0 w-full z-40"></app-navbar>
+  <app-navbar class=" top-[0px] left-0 w-full z-40 "></app-navbar> 
+   <!-- top-[0px] left-0 w-full z-40 -->
   <app-landing></app-landing>
 <main>
 
