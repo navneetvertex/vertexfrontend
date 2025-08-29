@@ -1,4 +1,4 @@
-<div class="pt-[0px] sm:pt-[105px] md:pt-[0px] pb-0 md:pb-80 lg:pb-0  relative z-1 bg-[#eff3f4] 2xl:bg-primary before:bg-[#eff3f4] before:left-0 before:top-0 before:bottom-0 before:-z-1 before:absolute before:w-[50%] 2xl:before:w-[45%] 3xl:before:w-[54%] before:hidden 2xl:before:block banner-area after:absolute after:right-[25%] after:top-[130px] after:w-[775px] after:h-[775px] after:rounded-full after:-z-2 after:hidden 2xl:after:block">
+<!-- <div class="pt-[0px] sm:pt-[105px] md:pt-[0px] pb-0 md:pb-80 lg:pb-0  relative z-1 bg-[#eff3f4] 2xl:bg-primary before:bg-[#eff3f4] before:left-0 before:top-0 before:bottom-0 before:-z-1 before:absolute before:w-[50%] 2xl:before:w-[45%] 3xl:before:w-[54%] before:hidden 2xl:before:block banner-area after:absolute after:right-[25%] after:top-[130px] after:w-[775px] after:h-[775px] after:rounded-full after:-z-2 after:hidden 2xl:after:block">
 	
 	<div class="px-0 sm:px-0 2xl:px-25 3xl:px-[80px] mx-auto  relative">
 	  
@@ -9,23 +9,221 @@
 	  [class.active]="i === currentSlideIndex"
 	  [ngStyle]="{'background-image': 'url(' + slide.image + ')'}">
 	  <div class="info">
-		<!-- <h3>{{ slide.title }}</h3> -->
-		<!-- <p>{{ slide.description }}</p> -->
+
 		<a *ngIf="slide.link" [href]="slide.link" class="btn">Know More</a>
 	  </div>
 	</div>
   
-	<!-- Shadow image at the bottom -->
+
 	<img
 	  class="shadow-img"
 	  src="images/dark.png"
 	  alt="shadow">
   
-	<!-- Navigation buttons -->
+
 	<div class="controls">
 	  <button (click)="previousSlide()">&lt;</button>
 	  <button (click)="nextSlide()">&gt;</button>
 	</div>
   </div>
 	</div>
+	</div> -->
+
+
+
+
+	<!-- <section class="py-20 bg-white">
+		<div class="container mx-auto px-4">
+		
+			  <div class="grid md:grid-cols-2 gap-10 items-center"[@fadeInDown]>
+				
+					<h2 >Modern Designer Sofa</h2>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+			
+			<div>
+			  <div class="col-lg-6">
+				<div class="about-img">
+				<img src="images/about_usimg.png" alt="About">
+			   
+				</div>
+				</div>
+			
+			</div>
+		  </div>
+		</div>
+	  </section> -->
+
+	  <!-- <div class="slider">
+
+		<div class="slider-container">
+			<div class="slide active" style="background-image: url('images/diposit.jpg');">
+				<div class="info">
+					<h1>Sultanahmet</h1>
+					<p>एक कदम आगे बढ़ाइए, सामाजिक प्रगति की ओर</p>
+				</div>
+			</div>
+			<div class="slide" style="background-image: url('images/slider_2.jpg');">
+				<div class="info">
+					<h1>Vertex Kalyan Sansthan</h1>
+					<p>Lond a helping hand to those in</p>
+				</div>
+			</div>
+			<div class="slide" style="background-image: url('images/slider4.jpg');">
+				<div class="info">
+					<h1>Vertex Kalyan Sansthan</h1>
+					<p>Think differant do better</p>
+				</div>
+			</div>
+			<div class="slide" style="background-image: url('images/slider4.jpg');">
+				<div class="info">
+					<h1>Vertex Kalyan Sansthan </h1>
+					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+				</div>
+			</div>
+			<div class="slide" style="background-image: url('images/slider2.jpg');">
+				<div class="info">
+					<h1>Vertex Kalyan Sansthan</h1>    
+					<p>Think differant do better</p>
+				</div>
+			</div>
+			<div class="slide" style="background-image: url('https://images.unsplash.com/photo-1523401153564-541006e5285a?ixlib=rb-1.2.1&auto=format&fit=crop&w=1652&q=80');">
+				<div class="info">
+					<h1>Vertex Kalyan Sansthan </h1>
+					<p>एक कदम आगे बढ़ाइए, सामाजिक प्रगति की ओर</p>
+			
+				</div>
+	
+			</div>
+		</div>
+		<div class="eraser"></div>
+		<div class="buttons-container">
+		
+		<button id="previous"><i class="fas fa-chevron-left"></i></button>
+			<button id="next"><i class="fas fa-chevron-right"></i></button>
+		</div>
+	</div>  -->
+
+<!-- new cde  -->
+<!-- <div class="slider-container">
+	<h1>The best for<br/>
+		the brightest.</h1>
+
+	<div class="slide active"><img src="images/slidee_1.jpg"></div>
+	<div class="slide"><img src="images/diposit.jpg"></div>
+	
+<div class="slide"><img src="images/slider_2.jpg"></div>
+
+	<div class="controls-container">
+		<div class="control"></div>
+		<div class="control"></div>
+		<div class="control"></div>
 	</div>
+</div>
+
+<div class="slider-container">
+  <h1>The best for<br/>the brightest.</h1>
+
+  <div #slide class="slide active"><img src="images/slidee_1.jpg"></div>
+  <div #slide class="slide"><img src="images/diposit.jpg"></div>
+  <div #slide class="slide"><img src="images/slider_2.jpg"></div>
+
+  <div class="controls-container">
+    <div #control class="control active"></div>
+    <div #control class="control"></div>
+    <div #control class="control"></div>
+  </div>
+</div> -->
+
+<!-- new cde jkkbjgkbjgkblfglkblfkglbkflklkfklk -->
+<!-- <div class="pt-[0px] sm:pt-[105px] md:pt-[0px] pb-0 md:pb-80 lg:pb-0 relative z-1 bg-[#eff3f4] 2xl:bg-primary before:bg-[#eff3f4] before:left-0 before:top-0 before:bottom-0 before:-z-1 before:absolute before:w-[50%] 2xl:before:w-[45%] 3xl:before:w-[54%] before:hidden 2xl:before:block banner-area after:absolute after:right-[25%] after:top-[130px] after:w-[775px] after:h-[775px] after:rounded-full after:-z-2 after:hidden 2xl:after:block">
+
+	<div class="px-0 sm:px-0 2xl:px-25 3xl:px-[80px] mx-auto relative space-y-12">
+
+<div class="slider-one ">
+	<div class="slider-one-image">
+	  <div class="slider-text">
+		<h1>Ride Fast or Stay Home</h1>
+		<p>I try to get away and take my motorcycle on a ride whenever I can. I'll take my bike out before the
+		  show and just cruise.
+		</p>
+	  </div>
+	</div>
+  </div>
+  <div class="slider-two">
+	<div class="slider-two-image">
+	  <div class="slider-text">
+		<h1>Shine Like a diamond in the Dark</h1>
+		<p>People are like stained glass windows, they sparkle and shine when the sun is out, but when darkness sets in their true beauty is revealed only if there is a light from within.
+		</p>
+	  </div>
+	</div>
+  </div>
+  <div class="slider-three">
+	<div class="slider-three-image">
+	  <div class="slider-text">
+		<h1>leave sooner, drive slower, live longer</h1>
+		<p>driving is not my hobby it's my feeling. I only love FAST CARS because I don't believe slow and
+		  steady wins the race.</p>
+	  </div>
+	</div>
+  </div>
+  <div class="slider-four">
+	<div class="slider-four-image">
+	  <div class="slider-text">
+		<h1>Girl in Dark</h1>
+		<p>If you can make a woman laugh, you can make her do anything.” “All little girls should be told they
+		  are pretty, even if they aren't.” “A girl should be two things: classy and fabulous</p>
+	  </div>
+	</div>
+  </div>
+  </div>
+  </div> -->
+
+
+  <div class="slider-wrapper pt-0 sm:pt-[105px] md:pt-0 relative z-1 bg-[#eff3f4] 2xl:bg-primary">
+	<div class="px-0 sm:px-0 2xl:px-25 3xl:px-[80px] mx-auto relative">
+  
+	  <div class="slider-one">
+		<div class="slider-one-image">
+		  <div class="slider-text">
+			<h1>Vertex Kalyan Cooperative </h1>
+			<p>Vertex Kalyan Cooperative Urban Thrift and Credit Society Limited 
+			</p>
+		  </div>
+		</div>
+	  </div>
+  
+	  <div class="slider-two">
+		<div class="slider-two-image">
+		  <div class="slider-text">
+			<h1>Vertex Kalyan Cooperative </h1>
+			<p>Vertex Kalyan Cooperative Urban Thrift and Credit Society Limited 
+			</p>
+		  </div>
+		</div>
+	  </div>
+  
+	  <div class="slider-three">
+		<div class="slider-three-image">
+		  <div class="slider-text">
+			<h1>Vertex Kalyan Cooperative </h1>
+			<p>Vertex Kalyan Cooperative Urban Thrift and Credit Society Limited 
+			</p>
+		  </div>
+		</div>
+	  </div>
+  
+	  <div class="slider-four">
+		<div class="slider-four-image">
+		  <div class="slider-text">
+			<h1>Vertex Kalyan Cooperative </h1>
+			<p>Vertex Kalyan Cooperative Urban Thrift and Credit Society Limited 
+			</p>
+		  </div>
+		</div>
+	  </div>
+  
+	</div>
+  </div>
+
+  

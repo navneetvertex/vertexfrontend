@@ -12,5 +12,30 @@
     --tw-bg-opacity: 1;
     background-color: rgb(1, 26, 65);
   }
+  // .bg_h a:hover{
+  //   background-color: gray;
+  // }
 
-  
+  @media (min-width: 992px) {
+    .footer2 {
+      clip-path: ellipse(118vw 100% at 50% 100%);
+      padding-top: 34px;
+    }
+  }
+  // footer last
+  .site-footer__bottom {
+    position: relative;
+    display: block;
+    background-color: #475162f0;
+  }
+  .site-footer__bottom-inner {
+    position: relative;
+    display: block;
+    text-align: center;
+    padding: 5px 0;
+  }
+  .site-footer__bottom-text {
+    font-size: 15px;
+    color: #98a8a5;
+    font-weight: 400;
+  }

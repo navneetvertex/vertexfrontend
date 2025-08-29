@@ -1,0 +1,50 @@
+.page-title {
+    background-image: url('https://smallbachatsociety.com/wp-content/uploads/2024/08/integrated-environmental-management-1000x1000-1.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 68px 0;
+    text-align: center;
+    color: white;
+    position: relative;
+  }
+  
+//   .page-title::before {
+//     content: "";
+//     position: absolute;
+//     inset: 0;
+//     background: rgba(0, 0, 0, 0.4); /* Dark overlay for text visibility */
+//   }
+  
+  .page-title-inner {
+    position: relative;
+    z-index: 1; /* Above overlay */
+  }
+  
+  .page-title h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0px;
+  }
+  
+  .ct-breadcrumb {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: inline-flex;
+    gap: 8px;
+    font-size: 1rem;
+  }
+  
+  .ct-breadcrumb li a {
+    color: hsl(350, 100%, 50%);
+    text-decoration: none;
+  }
+  
+  .ct-breadcrumb li a:hover {
+    text-decoration: underline;
+  }
+  
+  .ct-breadcrumb li span {
+    color: #050505;
+  }
+  

@@ -39,11 +39,19 @@
       @media (min-width: 992px) {
         .lg\:h-\[97\.45px\] {
           height: 49.45px;
+          width: 100%;
         }
       }
       @media (min-width: 992px) {
         .lg\:text-\[48px\] {
-          font-size: 23px;
+          font-size: 18px;
+        }
+      }
+      @media (min-width: 992px) {
+        .lg\:-tracking-\[1\.92px\] {
+          letter-spacing: 0.08px;
         }
       }
 }
+
+

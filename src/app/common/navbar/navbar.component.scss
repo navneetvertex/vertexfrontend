@@ -106,6 +106,12 @@
     }
 }
 // my code nav bar new for mobile
+.dhsyeger-2 {
+    font-family: Algerian;
+    color: #db397a;
+    text-align: center;
+    font-size: 20px;
+  }
 .bg-color{
     background: linear-gradient(to right, #ffd15c 0%, #011a41 5%);
     border-bottom: 3px solid #ffd15c;
@@ -113,9 +119,10 @@
     padding-left: 140px;
   }
 .t_d li a{
-    color: black;
-    background-color: #ffd15c;
-    padding: 2px;
+  color: white;
+  background-color: #011a41d6;
+  border-bottom: 1px solid rgb(255, 209, 92);
+  padding: 4px;
 }
 .t_d li:hover {
    
@@ -863,12 +870,12 @@ a.active {
   }
   .bg-white {
     --tw-bg-opacity: 1;
-    background-color: rgb(244, 244, 244);
+    background-color: #fff;
   }
   .hamburger div {
     width: 25px;
     height: 3px;
-    background-color: #0c0c0c;
+    background-color: #fff;
   }
   
   /* Side Drawer */
@@ -1107,13 +1114,16 @@ a.active {
       height: 0px;
     }
    
- .bg-color[_ngcontent-ng-c992342175] {
-  background: linear-gradient( to right, #ffd15c 0%, #fff 5%);
-    background-color: rgba(0, 0, 0, 0);
-  border-bottom: 3px solid #ffd15c;
-  padding: 10px;
-}
 
+
+  }
+  @media (max-width: 496px) {
+    .bg-color {
+      padding-left: 0px; /* smaller padding for mobile */
+      background: linear-gradient(to right, #ffd15c 0%, #011a41 30%);
+      color: white;
+   
+    }
   }
 //   @media (max-width: 640px) {
 //   .logo-link img h3{

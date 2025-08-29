@@ -8,4 +8,9 @@ import { RouterLink } from '@angular/router';
     templateUrl: './footer.component.html',
     styleUrls: ['./footer.component.scss']
 })
-export class FooterComponent {}
+export class FooterComponent {
+
+
+    center = { lat: 28.6139, lng: 77.2090 }; // Example: Delhi
+    zoom = 15;  
+}

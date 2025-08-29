@@ -1,0 +1,118 @@
+/* mis.component.scss */
+$primary: #e679a5; // rgb(230,121,165)
+$muted: #6b7280;
+$bg: linear-gradient(180deg, #f8fafc 0%, #ffffff 100%);
+$container: 1100px;
+
+.mis-page {
+  background: $bg;
+  padding: 36px 16px;
+  color: #0f172a;
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+
+  .container {
+    max-width: $container;
+    margin: 0 auto;
+    padding: 18px;
+  }
+
+  .hero {
+    text-align: center;
+    margin-bottom: 28px;
+
+    .tag {
+      display: inline-block;
+      background: rgba($primary, 0.12);
+      color: $primary;
+      padding: 8px 14px;
+      border-radius: 999px;
+      font-weight: 700;
+      margin-bottom: 12px;
+    }
+
+    h1 {
+      font-size: 1.8rem;
+      margin: 8px 0 12px;
+      line-height: 1.05;
+    }
+
+    p.lead {
+      color: $muted;
+      max-width: 70ch;
+      margin: 0 auto;
+      font-size: 1rem;
+    }
+  }
+
+  .card {
+    background: #fff;
+    border-radius: 12px;
+    padding: 18px;
+    box-shadow: 0 10px 30px rgba(15, 23, 42, 0.05);
+    border: 1px solid rgba(15, 23, 42, 0.03);
+    margin-bottom: 18px;
+  }
+
+  .section-title {
+    font-size: 1.125rem;
+    font-weight: 700;
+    color: #0f172a;
+    margin-bottom: 12px;
+  }
+
+  .bullets {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    gap: 10px;
+
+    li {
+      display: flex;
+      gap: 10px;
+      align-items: flex-start;
+      color: #374151;
+
+      &::before {
+        content: "";
+        display: inline-block;
+        width: 10px;
+        height: 10px;
+        background: $primary;
+        border-radius: 50%;
+        margin-top: 6px;
+      }
+    }
+  }
+
+  .cta {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    margin-top: 18px;
+
+    .btn {
+      padding: 12px 20px;
+      border-radius: 12px;
+      font-weight: 700;
+      cursor: pointer;
+      &.primary {
+        background: $primary;
+        color: white;
+        border: none;
+      }
+      &.ghost {
+        background: white;
+        border: 1px solid rgba(15, 23, 42, 0.06);
+        color: #0f172a;
+      }
+    }
+  }
+
+  .footer-note {
+    text-align: center;
+    color: $muted;
+    margin-top: 22px;
+    font-size: 0.95rem;
+  }
+}

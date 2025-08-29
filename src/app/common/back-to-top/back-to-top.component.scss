@@ -1,0 +1,63 @@
+.Design_Bottom {
+    width: 100%;
+    position: fixed;
+    bottom: 0rem;
+    height: 7rem;
+    z-index: 9;
+    background: linear-gradient( 90deg, rgba(255, 255, 255, 0.18) 50%, rgba(255, 255, 255, 0.27) 83%);
+  }
+//   .paper-Pen {
+//     width: 100%;
+//     height: auto;
+//     display: inline-block;
+//     padding: 0.5rem;
+//     background: url('/Images/icondemo.png') no-repeat;
+//     background-position: right 3rem center;
+//     background-size: contain;
+//   }
+  .paper-Pen {
+    background: url('/images/icondemo.png') no-repeat right 3rem center;
+    background-size: 64px 64px; /* ✅ Set width and height */
+    width: 97%;
+    height: auto;
+    display: inline-block;
+    padding: 0px;
+  }
+
+.BabyImg {
+  width: auto;
+
+  height: 7rem;
+
+  width: auto;
+
+  margin-bottom: -.5rem;
+
+}
+.kidsheading {
+  position: fixed;
+  right: 10px;
+  bottom: 4px;
+  padding: 5px 5px 0px;
+}
+.kidsheading a {
+
+  margin: 2rem;
+  font-size:16px;
+  text-transform: uppercase;
+  font-weight: bold;
+ animation: colorChange 3s infinite;
+}
+@keyframes multicolor-blink {
+  0%   { color: red;     opacity: 1; }
+  25%  { color: orange;  opacity: 0.6; }
+  50%  { color: green;   opacity: 1; }
+  75%  { color: blue;    opacity: 0.6; }
+  100% { color: violet;  opacity: 1; }
+}
+
+.kidsheading a {
+  animation: multicolor-blink 1s infinite;
+  font-weight: bold;
+  text-decoration: none;
+}

@@ -13,7 +13,7 @@
             },
             "scripts": [
                 "node_modules/apexcharts/dist/apexcharts.min.js",
-                "src/assets/js/mycode.js"
+                "src/assets/js/mycode.js" 
               ],
             "root": "",
             "sourceRoot": "src",

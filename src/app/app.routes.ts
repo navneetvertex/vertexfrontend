@@ -4,8 +4,17 @@ import { NotFoundComponent } from './common/not-found/not-found.component';
 import { HeaderTopComponent } from './common/header-top/header-top.component';
 import { HomeDemoTwoComponent } from './pages/home-demo-two/home-demo-two.component';
 import { AboutPageComponent } from './pages/about-page/about-page.component';
+import { SahyogCardComponent } from './pages/sahyog-card/sahyog-card.component';
+import { SavingDepositpageComponent } from './pages/saving-depositpage/saving-depositpage.component';
+import { FixedDepositComponent } from './pages/fixed-deposit/fixed-deposit.component';
+import { PersonalLoanComponent } from './pages/personal-loan/personal-loan.component';
+import { SelfHelpgroupComponent } from './pages/self-helpgroup/self-helpgroup.component';
+import { LoanAgainstFDComponent } from './pages/loan-against-fd/loan-against-fd.component';
+import { RecurringDepositComponent } from './pages/recurring-deposit/recurring-deposit.component';
+import { MonthlyIncomeSchemeComponent } from './pages/monthly-income-scheme/monthly-income-scheme.component';
 import { SkillUdaanComponent } from './pages/skill-udaan/skill-udaan.component';
 import { ServicesPageComponent } from './pages/services-page/services-page.component';
+import { LoansServicesComponent } from './common/loans-services/loans-services.component';
 import { ServiceDetailsPageComponent } from './pages/service-details-page/service-details-page.component';
 import { TestimonialsPageComponent } from './pages/testimonials-page/testimonials-page.component';
 import { SendMoneyPageComponent } from './pages/send-money-page/send-money-page.component';
@@ -38,10 +47,18 @@ import { LandingComponent } from './common/landing/landing.component';
 export const routes: Routes = [
     {path: '', component: HomeDemoTwoComponent},
     { path: 'landing', component: LandingComponent },
-    {path: 'about', component: AboutPageComponent},    
+    {path: 'about', component: AboutPageComponent},  
+    {path: 'sahyogCard', component: SahyogCardComponent},  
+    {path: 'savingdeposit', component: SavingDepositpageComponent},  
+    {path: 'fixeddeposit', component: FixedDepositComponent},  
+    {path: 'PersonalLoan', component: PersonalLoanComponent},  
+    {path: 'selfhelpgroup', component: SelfHelpgroupComponent}, 
+    {path: 'loanagainstFD', component: LoanAgainstFDComponent},   
+    {path: 'recurringdeposit', component: RecurringDepositComponent},  
+    {path: 'monthlyincomscgeme', component: MonthlyIncomeSchemeComponent},  
     {path: 'skilludaan', component: SkillUdaanComponent},  
     {path: 'deposits-services', component: ServicesPageComponent},
-    {path: 'loans-services', component: ServicesPageComponent},
+    {path: 'loansservices', component: LoansServicesComponent},
     {path: 'membership', component: ServiceMembershipComponent},
     {path: 'service-details', component: ServiceDetailsPageComponent},
     {path: 'testimonials', component: TestimonialsPageComponent},
