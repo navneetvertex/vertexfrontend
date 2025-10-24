@@ -27,6 +27,7 @@ import { HelpPageComponent } from './pages/help-page/help-page.component';
 import { LoginPageComponent } from './pages/login-page/login-page.component';
 import { RegisterPageComponent } from './pages/register-page/register-page.component';
 import { PrivacyPolicyPageComponent } from './pages/privacy-policy-page/privacy-policy-page.component';
+import { RefundPolicyComponent } from './pages/refund-policy/refund-policy.component';
 import { TermsConditionsPageComponent } from './pages/terms-conditions-page/terms-conditions-page.component';
 import { BlogPageComponent } from './pages/blog-page/blog-page.component';
 import { BlogDetailsPageComponent } from './pages/blog-details-page/blog-details-page.component';
@@ -78,6 +79,7 @@ export const routes: Routes = [
     {path: 'login', component: LoginPageComponent},
     {path: 'register', component: RegisterPageComponent},
     {path: 'privacy-policy', component: PrivacyPolicyPageComponent},
+    {path: 'refund-policy', component: RefundPolicyComponent},
     {path: 'terms-conditions', component: TermsConditionsPageComponent},
     // {path: 'blog', component: BlogPageComponent},
     // {path: 'blog-details', component: BlogDetailsPageComponent},

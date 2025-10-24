@@ -34,6 +34,7 @@ window.myCustomFunction = function () {
   controls[0].classList.add('active');
 };
 */
+
 window.myCustomFunction = function () {
   const slides = document.querySelectorAll(".slider-item");
 let index = 0;
@@ -51,4 +52,63 @@ function nextSlide() {
 
 showSlide(index);
 setInterval(nextSlide, 3000); // auto every 3s
+
+
+// Init slick slider + animation
+$('.slider').slick({
+  autoplay: true,
+  speed: 800,
+  lazyLoad: 'progressive',
+  arrows: false,
+  dots: true,
+}).slickAnimation();
+
+// slider full
+
+  var swiper = new Swiper(".mySwiper", {
+    effect: "fade",
+    fadeEffect: {
+      crossFade: true,        // fade with cross fade
+    },
+    loop: true,
+    autoplay: {
+      delay: 3000,             // 3 sec
+      disableOnInteraction: false
+    },
+    speed: 1000,                // smooth transition
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true
+    },
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev"
+    },
+    on: {
+      slideChangeTransitionStart: function () {
+        let activeSlide = document.querySelector(".swiper-slide-active");
+        if (!activeSlide) return;
+
+        let container = activeSlide.querySelector(".img");
+        if (!container) return;
+
+        // Create pixel effect
+        let createPixelContainer = document.createElement("div");
+        createPixelContainer.classList.add("pixel-transition");
+        createPixelContainer.innerHTML = `
+          <div></div><div></div><div></div><div></div><div></div>
+          <div></div><div></div><div></div><div></div><div></div>
+          <div></div><div></div><div></div><div></div><div></div>
+          <div></div><div></div><div></div><div></div><div></div>
+        `;
+        container.appendChild(createPixelContainer);
+        setTimeout(() => {
+          createPixelContainer.remove();
+        }, 1500);
+      }
+    }
+  });
+
+
+
 }
