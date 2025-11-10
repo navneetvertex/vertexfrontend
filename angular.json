@@ -10,10 +10,15 @@
                     "style": "scss"
                 }
                 
-            },
+            },   
+            "styles": [
+  "src/styles.css",
+  "https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+],  
             "scripts": [
                 "node_modules/apexcharts/dist/apexcharts.min.js",
-                "src/assets/js/mycode.js" 
+                "src/assets/js/mycode.js", "node_modules/aos/dist/aos.js",
+                "https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"
               ],
             "root": "",
             "sourceRoot": "src",
