@@ -1,12 +1,12 @@
-<footer class="bg-gray pt-15 md:pt-0 lg:pt-15 footer2 ">
+<!-- <footer class="bg-gray pt-15 md:pt-0 lg:pt-15 footer2 ">
     <div class="px-10 sm:px-0 container mx-auto">
         <div class="grid lg:grid-cols-2 gap-25">
-            <div class="lg:pr-[150px] 3xl:pr-[110px]">
-                <a routerLink="/" class="logo inline-block">
-                    <img src="images/whiteVERTIXLOGO.png" alt="logo" class="w-[39%]"> 
-                </a>
-              
-            </div>
+          <div class="lg:pr-[150px] 3xl:pr-[110px] flex justify-center lg:justify-start">
+            <a routerLink="/" class="logo inline-block">
+              <img src="images/whiteVERTIXLOGO.png" alt="logo" class="w-[39%] mx-auto lg:mx-0">
+            </a>
+          </div>
+          
         
             <div class="lg:-ml-[150px] 3xl:-ml-[110px]">
               <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 text-center md:text-left">
@@ -74,7 +74,8 @@
                   <div style="position: absolute; left: 0px; top: 0px; z-index: 104; width: 100%;"></div>
                 <div style="position: absolute; left: 0px; top: 0px; z-index: 105; width: 100%;">
               
-                </div><div style="position: absolute; left: 0px; top: 0px; z-index: 106; width: 100%;">
+                </div>
+                <div class="map-container"  style="position: absolute; left: 0px; top: 0px; z-index: 106; width: 100%;">
                   <slot></slot>  
                 <iframe
   src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d14009.044460618368!2d77.27584604465898!3d28.621935260724147!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1sPlot%20no%20-%2053%2C%203rd%20floor%2C%20Main%20road%2C%20Pandav%20Nagar%20East%20Delhi%2C%20PIN%20code%20-%20110092%20!5e0!3m2!1sen!2sin!4v1758030955342!5m2!1sen!2sin"
@@ -85,7 +86,8 @@
   loading="lazy"
   referrerpolicy="no-referrer-when-downgrade">
 </iframe>
-                </div><div style="position: absolute; left: 0px; top: 0px; z-index: 107; width: 100%;">
+                </div>
+                <div style="position: absolute; left: 0px; top: 0px; z-index: 107; width: 100%;">
               
                 </div>
               </div>
@@ -98,56 +100,14 @@
 
          
         </div>
-        <!-- <div class="border-t border-[#dddddd] mt-11 md:mt-24 pt-1 md:pt-7 pb-25 md:pb-15">
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 md:gap-25 text-center lg:text-left">
-              
-         
-              <div>
-                <p class="text-[11px] md:text-[11px] text-secondary" style="padding: 5px;">
-                 Vertex All Rights Reserved
-                </p>
-              </div>
-          
-              <div class="3xl:pl-[140px]">
-                <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-10 justify-center">
-                  <div>
-                    <a
-                      routerLink="/legal"
-                      class="text-[11.5px] md:text-[11px] text-secondary transition-all hover:text-primary relative before:left-0 before:right-0 before:bottom-0 before:h-[1px] before:bg-[#b5b2b2] before:absolute"
-                    >
-                      Legal
-                    </a>
-                  </div>
-                  <div>
-                    <a
-                      routerLink="/privacy-policy"
-                      class="text-[11.5px] md:text-[11px] text-secondary transition-all hover:text-primary relative before:left-0 before:right-0 before:bottom-0 before:h-[1px] before:bg-[#b5b2b2] before:absolute"
-                    >
-                      Privacy Policy
-                    </a>
-                  </div>
-                  <div>
-                    <a
-                      routerLink="/terms-conditions"
-                      class="text-[11.5px] md:text-[11px] text-secondary transition-all hover:text-primary relative before:left-0 before:right-0 before:bottom-0 before:h-[1px] before:bg-[#b5b2b2] before:absolute"
-                    >
-                      Terms of Use
-                    </a>
-                  </div>
-                </div>
-              </div>
-              
-            </div>
-          </div>
-           -->
+     
     </div>
     <div class="site-footer__bottom">
       <div class="container">
           <div class="row">
               <div class="col-xl-12">
                   <div class="site-footer__bottom-inner">
-                      <!-- <p class="site-footer__bottom-text">  @ All rights reserved | Vertex Kalyan Cooperative Society 
-                      </p> -->
+              
                       <p class="site-footer__bottom-text">
                         {{ text }}
                       </p>
@@ -156,6 +116,76 @@
           </div>
       </div>
   </div>
-</footer> 
+</footer>  -->
 
+<footer class="bg-gray pt-10 pb-6 footer2">
+  <div class="container mx-auto px-6 sm:px-0">
+    <div class="grid lg:grid-cols-2 gap-12 items-start">
+      
+      <!-- Logo -->
+      <div class="flex justify-center lg:justify-start">
+        <a routerLink="/" class="inline-block">
+          <img src="images/whiteVERTIXLOGO.png" alt="logo" class="w-[160px] mx-auto lg:mx-0">
+        </a>
+      </div>
+
+      <!-- Footer Links -->
+      <div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 text-center md:text-left">
+          
+          <!-- Company and Team -->
+          <div>
+            <h3 class="font-medium text-black text-[16px] mb-3">Company and Team</h3>
+            <ul class="space-y-3">
+              <li><a routerLink="/awards-recognition" class="text-secondary hover:text-primary">Awards and Recognition</a></li>
+              <li><a routerLink="/news-and-events" class="text-secondary hover:text-primary">News and Events</a></li>
+              <li><a routerLink="/contact" class="text-secondary hover:text-primary">Testimonials</a></li>
+              <li><a routerLink="/contact" class="text-secondary hover:text-primary">Careers</a></li>
+            </ul>
+          </div>
+
+          <!-- Get Help -->
+          <div>
+            <h3 class="font-medium text-black text-[16px] mb-3">Get Help</h3>
+            <ul class="space-y-3">
+              <li><a routerLink="/branches" class="text-secondary hover:text-primary">Contact</a></li>
+              <li><a routerLink="/privacy-policy" class="text-secondary hover:text-primary">Privacy Policy</a></li>
+              <li><a routerLink="/terms-conditions" class="text-secondary hover:text-primary">Terms & Conditions</a></li>
+              <li><a routerLink="/refund-policy" class="text-secondary hover:text-primary">Refund Policy</a></li>
+            </ul>
+          </div>
+
+          <!-- Address -->
+          <div>
+            <h3 class="font-medium text-black text-[16px] mb-3">Address</h3>
+            <ul class="space-y-2">
+              <li><p class="text-secondary">Plot no - 53, 3rd floor, Main road, Pandav Nagar, East Delhi<br>PIN code - 110092</p></li>
+              <li><p class="text-secondary">Mb.: +91-9319208666</p></li>
+              <li><p class="text-secondary">care&#64;vertexsociety.com</p></li>
+            </ul>
+          </div>
+
+          <!-- Google Map -->
+          <div class="relative">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d14009.044460618368!2d77.27584604465898!3d28.621935260724147!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1sPlot%20no%20-%2053%2C%203rd%20floor%2C%20Main%20road%2C%20Pandav%20Nagar%20East%20Delhi%2C%20PIN%20code%20-%20110092%20!5e0!3m2!1sen!2sin!4v1758030955342!5m2!1sen!2sin"
+              class="w-full h-[160px] rounded-md border-0"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bottom Bar -->
+  <div class="bg-gray-100 mt-10 py-3">
+    <div class="text-center text-sm text-gray-700 font-medium">
+      {{ text }}
+    </div>
+  </div>
+</footer>
 

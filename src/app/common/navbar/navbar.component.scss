@@ -1124,7 +1124,7 @@ a.active {
       height: 0px;
     }
    
-
+  
 
   }
   @media (max-width: 496px) {
@@ -1134,6 +1134,9 @@ a.active {
       color: white;
    
     }
+
+
+    
   }
 //   @media (max-width: 640px) {
 //   .logo-link img h3{
@@ -1145,3 +1148,30 @@ a.active {
 //   }
 // }
 //   new nav bar css
+@media (max-width: 496px)  {
+  
+    .logo-wrapper {
+        .logo-link {
+          display: flex;
+          align-items: center;
+          text-decoration: none;
+        
+      
+          img {
+            // height: 60px; 
+            height: 79px;
+            width: auto;
+            display: none;
+          }
+      
+          h3 {
+            margin-left: 12px;
+          
+            margin-bottom: 0;
+            font-size: 1.25rem;
+            font-weight: 900;
+          }
+        }
+      }
+  }
+  

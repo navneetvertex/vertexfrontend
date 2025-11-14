@@ -39,3 +39,9 @@
     color: #98a8a5;
     font-weight: 400;
   }
+
+  @media (max-width: 768px) {
+    .map-container {
+      display: none;
+    }
+  }
