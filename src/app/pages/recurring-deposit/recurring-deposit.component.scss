@@ -259,7 +259,8 @@ $container-max: 1100px;
   .rd-footer {
     margin-top: 28px;
     text-align: center;
-    color: lighten($muted, 10%);
+     color: lighten($muted, 10%);
+    //color: color.adjust($muted, $lightness: 10%);
   }
 }
 // card color

@@ -5,12 +5,12 @@
 
 import { Component, ElementRef, QueryList, ViewChildren, AfterViewInit,CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { DOCUMENT } from '@angular/common';
-import * as AOS from 'aos';
-import 'aos/dist/aos.css';
-import Swiper from 'swiper';
-import 'swiper/css';
-import 'swiper/css/navigation';
-import 'swiper/css/pagination';
+//import * as AOS from 'aos';
+//import 'aos/dist/aos.css';
+//import Swiper from 'swiper';
+//import 'swiper/css';
+//import 'swiper/css/navigation';
+//import 'swiper/css/pagination';
 
 
 // import { SwiperModule } from 'swiper/angular';
@@ -55,7 +55,7 @@ export class HtBannerComponent implements AfterViewInit {
 // }
 
 ngAfterViewInit(): void {
-  new Swiper('.mySwiper', {
+/*  new Swiper('.mySwiper', {
     loop: true,
     autoplay: {
       delay: 4000,
@@ -64,6 +64,7 @@ ngAfterViewInit(): void {
     speed: 1000,
     effect: 'slide',
   });
+  */
 }
 }
 
