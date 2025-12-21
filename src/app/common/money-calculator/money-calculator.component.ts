@@ -1,5 +1,5 @@
 import { Component, OnInit, NgZone } from '@angular/core';
-import { Router, RouterLink } from '@angular/router';
+import { Router } from '@angular/router';
 import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 declare var myCustomFunction: any;
@@ -10,7 +10,7 @@ export interface SliderItem {
 }
 @Component({
     selector: 'app-money-calculator',
-    imports: [RouterLink, ReactiveFormsModule,CommonModule],
+    imports: [ReactiveFormsModule,CommonModule],
     
     standalone: true,
     templateUrl: './money-calculator.component.html',

@@ -453,10 +453,10 @@
 // new slider demo
 // new slider code 
 /* src/styles.css */
-@import "swiper/css";
-@import "swiper/css/navigation";
-@import "swiper/css/pagination";
-@import "swiper/css/autoplay";
+@use "swiper/css";
+@use "swiper/css/navigation";
+@use "swiper/css/pagination";
+@use "swiper/css/autoplay";
 
 /* swiper container styling */
 .my-swiper {

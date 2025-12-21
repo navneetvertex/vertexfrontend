@@ -1,10 +1,10 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { Router, RouterLink } from '@angular/router';
+import { Router } from '@angular/router';
 
 @Component({
     selector: 'app-quote',
-    imports: [ RouterLink,CommonModule],
+    imports: [CommonModule],
     standalone: true,
     templateUrl: './quote.component.html',
     styleUrls: ['./quote.component.scss']

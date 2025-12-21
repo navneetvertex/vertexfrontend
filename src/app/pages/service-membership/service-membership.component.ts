@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { RouterLink } from '@angular/router';
 import { CalculateComponent } from '../../common/calculate/calculate.component';
 import { CollectingPaymentsComponent } from '../../common/collecting-payments/collecting-payments.component';
 import { DigitalBankingComponent } from '../../common/digital-banking/digital-banking.component';
@@ -7,7 +6,7 @@ import { SubscriptionComparisonComponent } from '../../common/subscription-compa
 import { CommonModule } from '@angular/common';
 @Component({
   selector: 'app-service-membership',
-  imports: [RouterLink,CommonModule, DigitalBankingComponent, CollectingPaymentsComponent, SubscriptionComparisonComponent],
+  imports: [CommonModule, DigitalBankingComponent, CollectingPaymentsComponent, SubscriptionComparisonComponent],
   standalone: true,
   templateUrl: './service-membership.component.html',
   styleUrl: './service-membership.component.scss'

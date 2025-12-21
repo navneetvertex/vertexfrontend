@@ -113,6 +113,7 @@
     background-color: #fff;
     z-index: 1000;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    margin-bottom: 5px;
 }
 // my code nav bar new for mobile
 .dhsyeger-2 {
@@ -1175,3 +1176,63 @@ a.active {
       }
   }
   
+
+// Professional login/register buttons
+.login-btn {
+    color: white;
+    font-weight: 600;
+    font-size: 14px;
+    padding: 8px 20px;
+    margin-right: 12px;
+    border: 2px solid white;
+    border-radius: 6px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    display: inline-block;
+    
+    &:hover {
+        background-color: white;
+        color: #1a365d;
+        transform: translateY(-1px);
+        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+}
+
+.register-btn {
+    background: linear-gradient(135deg, #ffd700, #ffed4e);
+    color: #1a365d;
+    font-weight: 600;
+    font-size: 14px;
+    padding: 8px 20px;
+    border-radius: 6px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    display: inline-block;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    
+    &:hover {
+        background: linear-gradient(135deg, #ffed4e, #ffd700);
+        transform: translateY(-1px);
+        box-shadow: 0 4px 12px rgba(255,215,0,0.3);
+    }
+}
+
+.logout-btn {
+    background: linear-gradient(135deg, #dc2626, #ef4444);
+    color: white;
+    font-weight: 600;
+    font-size: 14px;
+    padding: 8px 20px;
+    border-radius: 6px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    display: inline-block;
+    cursor: pointer;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    
+    &:hover {
+        background: linear-gradient(135deg, #b91c1c, #dc2626);
+        transform: translateY(-1px);
+        box-shadow: 0 4px 12px rgba(220,38,38,0.3);
+    }
+}
