@@ -14,12 +14,19 @@ export class NavbarComponent implements OnInit {
     isVisible = false; 
     isDrawerOpen = false;
     isMobileDropdownOpen = false;
-    isDesktopDropdownOpen = false; // <-- Add this line to fix the error
+    isDesktopDropdownOpen = false;
     openDropdown: string | null = null;
+    
+    // Mobile menu properties
+    isMobileMenuOpen = false;
+    isServicesDropdownOpen = false;
+    isExtrasDropdownOpen = false;
+    isProfileDropdownOpen = false;
 
     toggleDropdown(name: string) {
       this.openDropdown = this.openDropdown === name ? null : name;
     }
+    
     toggleDrawer() {
       this.isDrawerOpen = !this.isDrawerOpen;
       if (!this.isDrawerOpen) {
@@ -30,14 +37,24 @@ export class NavbarComponent implements OnInit {
     toggleMobileDropdown() {
       this.isMobileDropdownOpen = !this.isMobileDropdownOpen;
     }
-    // isDrawerOpen: boolean = false;
+    
+    // Mobile menu methods
+    toggleMobileMenu() {
+        this.isMobileMenuOpen = !this.isMobileMenuOpen;
+    }
+    
+    toggleServicesDropdown() {
+        this.isServicesDropdownOpen = !this.isServicesDropdownOpen;
+    }
+    
+    toggleExtrasDropdown() {
+        this.isExtrasDropdownOpen = !this.isExtrasDropdownOpen;
+    }
+    
+    toggleProfileDropdown() {
+        this.isProfileDropdownOpen = !this.isProfileDropdownOpen;
+    }
 
-    // toggleDrawer() {
-    //   this.isDrawerOpen = !this.isDrawerOpen;
-    // } 
-    // closeDrawer() {
-    //   this.isDrawerOpen = false;
-    // }
     constructor(
         public router: Router,
         private authService: AuthService
@@ -57,15 +74,16 @@ export class NavbarComponent implements OnInit {
             }
         });
 
-        // mobile show
         this.checkIfMobile();
     }
+    
     checkIfMobile() {
       if (typeof window !== 'undefined') {
         return window.innerWidth < 768;
       }
-      return false; // or default fallback
+      return false;
     }
+    
     logout() {
         this.authService.logout()
     }
@@ -80,7 +98,6 @@ export class NavbarComponent implements OnInit {
         this.sidebarClassApplied = !this.sidebarClassApplied;
     }
 
-    // Navbar Sticky
     isSticky: boolean = false;
     @HostListener('window:scroll', ['$event'])
     checkScroll() {
@@ -91,7 +108,4 @@ export class NavbarComponent implements OnInit {
             this.isSticky = false;
         }
     }
-    // new code
- 
-
 }

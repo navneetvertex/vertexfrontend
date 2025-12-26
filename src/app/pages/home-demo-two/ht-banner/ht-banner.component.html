@@ -355,47 +355,191 @@
  
  
  
-  <section class="relative w-full overflow-hidden bg-gray-50  tm_130">
-	<swiper-container
-	  class="mySwiper"
-	  slides-per-view="1"
-	  loop="true"
-	  autoplay-delay="4000"
-	  autoplay-disable-on-interaction="false"
-	  speed="1000"
-	  effect="slide"
-	>
+  <!-- Professional Banking Hero Section -->
+  <section class="hero-section">
+    <div class="hero-overlay"></div>
+    
+    <swiper-container
+      class="banking-hero-swiper"
+      slides-per-view="1"
+      loop="true"
+      autoplay-delay="6000"
+      autoplay-disable-on-interaction="false"
+      speed="1000"
+      effect="fade"
+      pagination="true"
+      navigation="true"
+    >
+      <!-- Slide 1 -->
+      <swiper-slide class="hero-slide">
+        <div class="banking-hero-slide">
+          <div class="hero-image-container">
+            <div class="banking-overlay"></div>
+          </div>
+          
+          <div class="banking-content">
+            <div class="banking-text-container">
+              <div class="trust-badge">
+                <span class="trust-text">RBI Approved • ISO Certified</span>
+              </div>
+              <h1 class="banking-title">
+                <span class="title-primary">Vertex Kalyan</span>
+                <span class="title-secondary">Cooperative Society</span>
+              </h1>
+              <p class="banking-description">
+                Your trusted partner in financial growth. Experience secure banking with comprehensive deposit and loan solutions designed for your prosperity.
+              </p>
+              <div class="banking-stats">
+                <div class="stat-item">
+                  <span class="stat-number">19M+</span>
+                  <span class="stat-label">Active Members</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat-item">
+                  <span class="stat-number">25+</span>
+                  <span class="stat-label">Years Experience</span>
+                </div>
+              </div>
+              <div class="banking-buttons">
+                <a routerLink="/membership" class="btn-banking-primary">
+                  <svg class="btn-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path>
+                  </svg>
+                  <span>Become a Member</span>
+                </a>
+                <a routerLink="/about" class="btn-banking-secondary">
+                  <span>Learn More</span>
+                  <svg class="btn-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </swiper-slide>
 
-	  <swiper-slide>
-		<div class="flex justify-center items-center w-full">
-		  <img
-			src="images/bg/42.jpg"
-			alt="Vertex Slide 1"
-			class="w-full h-auto max-h-[500px] object-contain md:object-cover rounded-none md:rounded-2xl shadow-md"
-		  />
-		</div>
-	  </swiper-slide>
-  
-	  <swiper-slide>
-		<div class="flex justify-center items-center w-full">
-		  <img
-			src="images/bg/ruff copy.jpg"
-			alt="Vertex Slide 2"
-			class="w-full h-auto max-h-[500px] object-contain md:object-cover rounded-none md:rounded-2xl shadow-md"
-		  />
-		</div>
-	  </swiper-slide>
-  
-	
-	  <swiper-slide>
-		<div class="flex justify-center items-center w-full">
-		  <img
-			src="images/bg/vertexcooperative.png"
-			alt="Vertex Slide 3"
-			class="w-full h-auto max-h-[500px] object-contain md:object-cover rounded-none md:rounded-2xl shadow-md"
-		  />
-		</div>
-	  </swiper-slide>
-	</swiper-container>
+      <!-- Slide 2 -->
+      <swiper-slide class="hero-slide">
+        <div class="banking-hero-slide">
+          <div class="hero-image-container">
+            <div class="banking-overlay banking-overlay-2"></div>
+          </div>
+          
+          <div class="banking-content">
+            <div class="banking-text-container">
+              <div class="trust-badge">
+                <span class="trust-text">Secure • Reliable • Transparent</span>
+              </div>
+              <h1 class="banking-title">
+                <span class="title-primary">Comprehensive</span>
+                <span class="title-secondary">Financial Solutions</span>
+              </h1>
+              <p class="banking-description">
+                From fixed deposits to personal loans, discover our complete range of banking services tailored to meet your financial aspirations and goals.
+              </p>
+              <div class="banking-features">
+                <div class="feature-item">
+                  <svg class="feature-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
+                  </svg>
+                  <span>Secure Deposits</span>
+                </div>
+                <div class="feature-item">
+                  <svg class="feature-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1"></path>
+                  </svg>
+                  <span>Competitive Rates</span>
+                </div>
+                <div class="feature-item">
+                  <svg class="feature-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                  </svg>
+                  <span>Quick Processing</span>
+                </div>
+              </div>
+              <div class="banking-buttons">
+                <a routerLink="/deposits-services" class="btn-banking-primary">
+                  <svg class="btn-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path>
+                  </svg>
+                  <span>View Services</span>
+                </a>
+                <a routerLink="/calculator" class="btn-banking-secondary">
+                  <span>Calculate Returns</span>
+                  <svg class="btn-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z"></path>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </swiper-slide>
+
+      <!-- Slide 3 -->
+      <swiper-slide class="relative">
+        <div class="banking-hero-slide">
+          <div class="hero-image-container">
+            <div class="banking-overlay banking-overlay-3"></div>
+          </div>
+          
+          <div class="banking-content">
+            <div class="banking-text-container">
+              <div class="trust-badge">
+                <span class="trust-text">Community Focused • Growth Oriented</span>
+              </div>
+              <h1 class="banking-title">
+                <span class="title-primary">Building Stronger</span>
+                <span class="title-secondary">Communities Together</span>
+              </h1>
+              <p class="banking-description">
+                Join our cooperative family and be part of a financial institution that prioritizes community development and mutual growth for all members.
+              </p>
+              <div class="banking-achievements">
+                <div class="achievement-item">
+                  <div class="achievement-icon">
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                    </svg>
+                  </div>
+                  <div class="achievement-text">
+                    <span class="achievement-number">50+</span>
+                    <span class="achievement-label">Branch Locations</span>
+                  </div>
+                </div>
+                <div class="achievement-item">
+                  <div class="achievement-icon">
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1"></path>
+                    </svg>
+                  </div>
+                  <div class="achievement-text">
+                    <span class="achievement-number">₹500Cr+</span>
+                    <span class="achievement-label">Assets Under Management</span>
+                  </div>
+                </div>
+              </div>
+              <div class="banking-buttons">
+                <a routerLink="/branches" class="btn-banking-primary">
+                  <svg class="btn-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                  </svg>
+                  <span>Find Branch</span>
+                </a>
+                <a routerLink="/testimonials" class="btn-banking-secondary">
+                  <span>Success Stories</span>
+                  <svg class="btn-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"></path>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </swiper-slide>
+    </swiper-container>
   </section>
   

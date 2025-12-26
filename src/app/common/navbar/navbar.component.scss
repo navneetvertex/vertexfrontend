@@ -1017,14 +1017,108 @@ a.active {
     }
     }
  
-// mobile
+/* Mobile Drawer Styles */
+.drawer-link {
+  display: block;
+  padding: 12px 16px;
+  color: #333;
+  text-decoration: none;
+  border-bottom: 1px solid #eee;
+  font-size: 16px;
+}
 
-// top header css code
-// top header css code
-// top header css code
-// top header css code
-//   nav op design
-// nav op design
+.drawer-link:hover {
+  background-color: #f5f5f5;
+  color: #007bff;
+}
+
+.sub-link {
+  display: block;
+  padding: 8px 32px;
+  color: #666;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.mobile-dropdown {
+  background-color: #f9f9f9;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+}
+
+.mobile-dropdown.show {
+  max-height: 200px;
+}
+
+.float-right {
+  float: right;
+}
+@media (max-width: 1024px) {
+  .desktop {
+    display: none !important;
+  }
+  .hamburger {
+    display: flex !important;
+  }
+}
+
+/* Responsive Design - Mobile First Approach */
+
+@media (max-width: 640px) {
+  .fix_eader {
+    padding: 0;
+  }
+  
+  .bg-color {
+    padding: 8px 10px;
+    padding-left: 10px;
+  }
+  
+  .navbar-container {
+    padding: 0.5rem 1rem;
+  }
+  
+  .side-drawer {
+    width: 280px;
+  }
+  
+  .drawer-links {
+    padding: 0;
+  }
+  
+  .drawer-links li {
+    margin: 0;
+    padding: 8px 0;
+    border-bottom: 1px solid #eee;
+  }
+  
+  .drawer-links a {
+    color: #333 !important;
+    font-size: 16px;
+    padding: 12px 16px;
+    display: block;
+  }
+}
+
+@media (max-width: 480px) {
+  .dhsyeger-2 {
+    font-size: 14px;
+  }
+  
+  .logo-link h3 {
+    font-size: 0.9rem;
+  }
+  
+  .other-options {
+    gap: 8px;
+  }
+  
+  .login-btn, .register-btn, .logout-btn {
+    padding: 6px 12px;
+    font-size: 12px;
+  }
+}
 .phone-icon {
     color: #df120d;
   font-size: 24px;
