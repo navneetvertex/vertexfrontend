@@ -18,6 +18,142 @@
     left: 432px;
   }
 
+/* Professional Banking Events Section */
+.banking-events-section {
+  position: relative;
+}
+
+.banking-events-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: 
+    radial-gradient(circle at 25% 25%, rgba(59, 130, 246, 0.05) 0%, transparent 50%),
+    radial-gradient(circle at 75% 75%, rgba(251, 191, 36, 0.05) 0%, transparent 50%);
+  pointer-events: none;
+}
+
+/* Events Slider */
+#eventsSlider {
+  transform: translateX(0%);
+  transition: transform 0.5s ease-in-out;
+}
+
+.slide-indicator {
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.slide-indicator.active {
+  background-color: #2563eb !important;
+  transform: scale(1.2);
+}
+
+.slide-indicator:not(.active):hover {
+  background-color: #6b7280 !important;
+}
+
+/* Professional Card Effects */
+.group:hover {
+  transform: translateY(-2px);
+  transition: all 0.3s ease;
+}
+
+.group:hover .shadow-lg {
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+/* Background Images */
+.bg-2 { background-image: url('/images/WhyChooseUs.png'); }
+.bg-3 { background-image: url('/images/WhyChooseUs1.png'); }
+.bg-4 { background-image: url('/images/WhyChooseUs.png'); }
+.bg-5 { background-image: url('/images/WhyChooseUs1.png'); }
+.bg-6 { background-image: url('/images/WhyChooseUs.png'); }
+.bg-7 { background-image: url('/images/WhyChooseUs1.png'); }
+.bg-8 { background-image: url('/images/WhyChooseUs.png'); }
+.bg-9 { background-image: url('/images/WhyChooseUs1.png'); }
+.bg-10 { background-image: url('/images/WhyChooseUs.png'); }
+
+.bg-image {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  transition: transform 0.3s ease;
+}
+
+/* Professional Hover Effects */
+.group:hover .bg-image {
+  transform: scale(1.05);
+}
+
+/* Certificate Card Hover Effects */
+.group:hover .w-12 {
+  transform: scale(1.05);
+  transition: transform 0.3s ease;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .banking-events-section h2 {
+    font-size: 3rem;
+  }
+  
+  .banking-events-section .text-xl {
+    font-size: 1.125rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .banking-events-section h2 {
+    font-size: 2.5rem;
+  }
+  
+  .banking-events-section .text-xl {
+    font-size: 1rem;
+  }
+  
+  .banking-events-section .grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  
+  #eventsSlider .grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .banking-events-section .px-8 {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+  
+  .banking-events-section .py-6 {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .banking-events-section h2 {
+    font-size: 2rem;
+  }
+  
+  .banking-events-section .text-2xl {
+    font-size: 1.5rem;
+  }
+  
+  .banking-events-section .text-lg {
+    font-size: 1rem;
+  }
+  
+  .banking-events-section .px-6 {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
+
   //slide
   /* component.css or global styles */
   .section-title__title {
@@ -127,20 +263,6 @@
   background-size: cover;
   background-position: center;
 }
-.bg-2{
-  background-image: url('/images/WhyChooseUs.png');}
-  .bg-3{ 
-     background-image: url('/images/WhyChooseUs1.png');}
-  .bg-4{
-    background-image: url('/images/WhyChooseUs.png');
-  }
-  .bg-5{ 
-    background-image: url('/images/WhyChooseUs1.png');}
-    .bg-6{
-      background-image: url('/images/WhyChooseUs.png');
-    }
-    .bg-7{ 
-      background-image: url('/images/WhyChooseUs1.png');}
 
 @keyframes scroll {
   0%   { transform: translateX(0); }

@@ -1,85 +1,64 @@
 <!-- Page Title -->
-<div class="pt-[15px]  bg-gray relative z-1 before:left-0 before:right-0 before:bottom-0 before:-z-1 before:absolute before:bg-white before:h-70 md:before:h-40 xl:before:h-50 2xl:before:h-[125px]">
-    <div class="px-10 sm:px-0 container mx-auto">
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-25">
-            <div class="col-span-2 lg:mt-25 xl:mt-[45px] 2xl:mt-[65px]">
-                <div class="xl:pl-40 2xl:pl-[98px] 2xl:pr-60">
-                    <span class="block text-primary text-[15px] md:text-[16px] lg:text-[20px] lg:text-[20px] font-semibold">
-                        Our Services
+<div class="pt-24 sm:pt-32 md:pt-40 lg:pt-48 pb-8 sm:pb-12 md:pb-16 bg-gradient-to-br from-blue-50 to-indigo-100 relative">
+    <div class="container mx-auto px-4">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-center">
+            <div class="col-span-2">
+                <div class="max-w-2xl">
+                    <span class="inline-block bg-blue-100 text-blue-800 px-4 py-2 rounded-full text-md font-semibold mb-6">
+                        Our Services 
                     </span>
-                    <h1 class="font-bold text-black text-[25px] md:text-[35px] lg:text-[48px] xl:text-[57px] leading-[1.25] mt-10" *ngIf="router.url === '/deposits-services'" >
+                    <h1 class="font-bold text-gray-900 text-3xl md:text-4xl lg:text-5xl leading-tight mb-4" *ngIf="router.url === '/deposits-services'" >
                         Reliable deposit plans for every member
                     </h1>
-                    <h1 class="font-bold text-black text-[25px] md:text-[35px] lg:text-[48px] xl:text-[57px] leading-[1.25] mt-10" *ngIf="router.url === '/loans-services'" >
+                    <h1 class="font-bold text-gray-900 text-3xl md:text-4xl lg:text-5xl leading-tight mb-4" *ngIf="router.url === '/loans-services'" >
                         Low-interest loans, hassle-free process.
                     </h1>
                 </div>
             </div>
-            <div class="2xl:-ml-40">
-                <img src="images/services.png" alt="services-image">
+            <div class="flex justify-center">
+                <img src="images/services.png" alt="services-image" class="max-w-sm h-auto drop-shadow-lg">
             </div>
         </div>
     </div>
 </div>
 
-<section class="mf_detail bbps py-10">
+<section class="mf_detail bbps py-16">
   <div class="container mx-auto px-4">
-    <div class="flex justify-between items-center mb-6">
-      <h3 class="text-2xl font-bold">Select Categories</h3>
+    <div class="text-center mb-12">
+      <h3 class="text-3xl font-bold text-gray-800">Select Categories</h3>
     </div>
-    <div class="bbps_bg">&nbsp;</div>
 
-
-    <div>
-      <div id="main_wrapper">
-        <div class="container">
-          <div class="row">
-            <div class="col-xl-12 col-lg-12">
-              <div class="bbps_prod justify-content-start ">
-            
-
-                <a href="/savingdeposit" name="SavingDeposit">
-                  <div class="bbps_prod_img_box">
-                    <img src="https://investkraft-new.s3.ap-south-1.amazonaws.com/web_app/live/assets/images/svg/broadband-landline.svg?ver=1.13" alt="Broadband Landline">
-                  </div>
-                  <h5>Saving Deposit Account</h5>
-                </a>
-
-                <a href="/fixeddeposit" class="active" name="Fixeddeposit">
-                  <div class="bbps_prod_img_box">
-                    <img src="https://investkraft-new.s3.ap-south-1.amazonaws.com/web_app/live/assets/images/svg/electricity.svg?ver=1.13" alt="Electricity">
-                  </div>
-                  <h5>Fixed deposit</h5>
-                </a>
-
-
-                <a href="/recurringdeposit" name="Recurring">
-                  <div class="bbps_prod_img_box">
-                    <img src="https://investkraft-new.s3.ap-south-1.amazonaws.com/web_app/live/assets/images/svg/dth.svg?ver=1.13" alt="DTH">
-                  </div>
-                  <h5>Recurring deposit</h5>
-                </a>
-
-                <a href="/monthlyincomscgeme" name="MonthlyIncome ">
-                  <div class="bbps_prod_img_box">
-                    <img src="https://investkraft-new.s3.ap-south-1.amazonaws.com/web_app/live/assets/images/svg/lpg-gas.svg?ver=1.13" alt="LPG Gas">
-                  </div>
-                  <h5> Monthly Income Scheme</h5>
-                </a>
-
-              
-              </div>
-            </div>
-          </div>
-
-        
-        
+    <div class="bbps_prod justify-center">
+      <a href="/savingdeposit" name="SavingDeposit">
+        <div class="bbps_prod_img_box">
+          <img src="https://investkraft-new.s3.ap-south-1.amazonaws.com/web_app/live/assets/images/svg/broadband-landline.svg?ver=1.13" alt="Broadband Landline">
         </div>
-      </div>
+        <h5>Saving Deposit Account</h5>
+      </a>
+
+      <a href="/fixeddeposit" class="fixed_deposit" name="Fixeddeposit">
+        <div class="bbps_prod_img_box">
+          <img src="https://investkraft-new.s3.ap-south-1.amazonaws.com/web_app/live/assets/images/svg/electricity.svg?ver=1.13" alt="Electricity">
+        </div>
+        <h5>Fixed deposit</h5>
+      </a>
+
+      <a href="/recurringdeposit" name="Recurring">
+        <div class="bbps_prod_img_box">
+          <img src="https://investkraft-new.s3.ap-south-1.amazonaws.com/web_app/live/assets/images/svg/dth.svg?ver=1.13" alt="DTH">
+        </div>
+        <h5>Recurring deposit</h5>
+      </a>
+
+      <a href="/monthlyincomscgeme" name="MonthlyIncome">
+        <div class="bbps_prod_img_box">
+          <img src="https://investkraft-new.s3.ap-south-1.amazonaws.com/web_app/live/assets/images/svg/lpg-gas.svg?ver=1.13" alt="LPG Gas">
+        </div>
+        <h5>Monthly Income Scheme</h5>
+      </a>
     </div>
-    </div>
-    
-  </section>
+  </div>
+</section>
 
 
 <app-services />

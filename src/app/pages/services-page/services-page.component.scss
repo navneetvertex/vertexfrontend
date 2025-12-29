@@ -1,84 +1,201 @@
-// .bbps_prod {
-//     display: flex;
-//     flex-wrap: nowrap;
-//     overflow-x: auto;
-//     padding: 1rem 0;
-//     gap: 1rem;
-//     scrollbar-width: thin;
-    
-//   }
-  
-//   .bbps_prod a {
-//     flex: 0 0 auto;
-//     text-align: center;
-//     text-decoration: none;
-//     color: #000;
-//   }
-  
-  .bbps_prod_img_box {
-    width: 117px;
-    height: 117px;
+.relative{
+  margin-top: 5rem;
+}
+.bbps_prod {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+  padding: 2rem 0;
+}
+
+.bbps_prod a {
+  text-align: center;
+  width: 220px;
+  text-decoration: none;
+  color: #000;
+  transition: transform 0.3s ease;
+}
+
+.bbps_prod a:hover {
+  transform: translateY(-5px);
+}
+
+.bbps_prod_img_box {
+  width: 117px;
+  height: 117px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   background: #fff;
-    border-radius: 100px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 0 auto;
-    // transition: all 0.3s;
+  border-radius: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto 1rem;
+  padding: 15px;
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
 
-  
+.bbps_prod a:hover .bbps_prod_img_box {
+  transform: scale(1.1);
+  filter: drop-shadow(0 4px 6px rgba(215, 32, 106, 0.6));
+}
 
-    padding: 15px;
-    transition: transform 0.3s ease, filter 0.3s ease;
+.bbps_prod_img_box img {
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+}
+
+.bbps_prod h5 {
+  margin-top: 0.5rem;
+  font-size: 15px;
+  font-weight: 600;
+  color: #333;
+}
+
+.bbps_prod a.active .bbps_prod_img_box {
+  background: #fff;
+  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+  border: 3px solid #667eea;
+}
+
+.bbps_prod a.active .bbps_prod_img_box img {
+  filter: none;
+}
+
+.bbps_prod a.active h5 {
+  color: #667eea;
+  font-weight: 700;
+}
+
+@media (max-width: 1200px) {
+  .bbps_prod {
+    gap: 1.8rem;
   }
-  .bbps_page .bbps .bbps_prod a:hover .bbps_prod_img_box {
-    transform: scale(1.1);
-    fill: #fff;
-    filter: drop-shadow(0px 4px 4px #d7206a);
+  
+  .bbps_prod a {
+    width: 200px;
+  }
+  
+  .bbps_prod_img_box {
+    width: 110px;
+    height: 110px;
+  }
+  
+  .bbps_prod_img_box img {
+    width: 45px;
+    height: 45px;
+  }
+  
+  .bbps_prod h5 {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 992px) {
+  .bbps_prod {
+    gap: 1.6rem;
+  }
+  
+  .bbps_prod a {
+    width: 180px;
+  }
+  
+  .bbps_prod_img_box {
+    width: 100px;
+    height: 100px;
+  }
+  
+  .bbps_prod_img_box img {
+    width: 42px;
+    height: 42px;
+  }
+}
+
+@media (max-width: 768px) {
+  .bbps_prod {
+    gap: 1.5rem;
+    padding: 1rem 0;
+  }
+  
+  .bbps_prod a {
+    width: 160px;
+  }
+  
+  .bbps_prod_img_box {
+    width: 90px;
+    height: 90px;
   }
   
   .bbps_prod_img_box img {
     width: 40px;
     height: 40px;
-    object-fit: contain;
   }
   
   .bbps_prod h5 {
-    font-size: 14px;
-    margin-top: 0.3rem;
-    font-weight: 500;
+    font-size: 13px;
   }
-  .hover-shadow:hover {
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  }
+}
 
-
-//   
-.bbps_prod {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
+@media (max-width: 576px) {
+  .bbps_prod {
+    gap: 1rem;
+    padding: 0.8rem 0;
   }
   
   .bbps_prod a {
-    text-align: center;
-    width: 267px;
-    text-decoration: none;
-    color: #000;
-    transition: transform 0.3s ease;
+    width: 140px;
   }
   
+  .bbps_prod_img_box {
+    width: 80px;
+    height: 80px;
+    padding: 12px;
+  }
   
-  
-  .bbps_prod a:hover .bbps_prod_img_box {
-    transform: scale(1.1);
-    filter: drop-shadow(0 4px 6px rgba(215, 32, 106, 0.6));
+  .bbps_prod_img_box img {
+    width: 35px;
+    height: 35px;
   }
   
   .bbps_prod h5 {
-    margin-top: 10px;
-    font-size: 15px;
-    font-weight: 500;
+    font-size: 12px;
+    margin-top: 0.4rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .bbps_prod {
+    gap: 0.8rem;
+    flex-direction: column;
+    align-items: center;
   }
   
+  .bbps_prod a {
+    width: 120px;
+  }
+  
+  .bbps_prod_img_box {
+    width: 70px;
+    height: 70px;
+    padding: 10px;
+  }
+  
+  .bbps_prod_img_box img {
+    width: 30px;
+    height: 30px;
+  }
+  
+  .bbps_prod h5 {
+    font-size: 11px;
+  }
+}
+
+// Legacy styles kept for compatibility
+.relative{
+  margin-top: 5rem;
+}
+
+.hover-shadow:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
