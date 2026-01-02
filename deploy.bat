@@ -6,11 +6,11 @@ REM ================================
 SET PEM_KEY_PATH=C:\Users\navne\Downloads\vertexkalyan.pem
 SET EC2_HOST=52.65.32.92
 SET EC2_USER=ubuntu
-SET PROJECT_NAME=vertexfrontend
+SET PROJECT_NAME=vertex
 
 echo ================================
 echo Deploying VertexFrontend to EC2
-echo ================================
+================================
 
 echo.
 echo [1/4] Building Angular project...
@@ -21,14 +21,15 @@ if %ERRORLEVEL% EQU 0 (
     echo.
     echo [2/4] Uploading files to EC2...
     
-    scp -i "%PEM_KEY_PATH%" -r dist\%PROJECT_NAME%\* %EC2_USER%@%EC2_HOST%:~/vertexfrontend_build/
+    REM Note: Files are in dist\vertex\browser\
+    scp -i "%PEM_KEY_PATH%" -r dist\%PROJECT_NAME%\browser\* %EC2_USER%@%EC2_HOST%:~/vertexfrontend_build/
     
     if %ERRORLEVEL% EQU 0 (
         echo [SUCCESS] Files uploaded!
         echo.
         echo [3/4] Deploying on server...
         
-        ssh -i "%PEM_KEY_PATH%" %EC2_USER%@%EC2_HOST% "sudo rm -rf /var/www/html/* && sudo cp -r ~/vertexfrontend_build/* /var/www/html/ && sudo chown -R www-data:www-data /var/www/html/ && sudo systemctl restart nginx && rm -rf ~/vertexfrontend_build"
+        ssh -i "%PEM_KEY_PATH%" %EC2_USER%@%EC2_HOST% "sudo rm -rf /var/www/html/* && sudo cp -r ~/vertexfrontend_build/* /var/www/html/ && sudo chown -R www-data:www-data /var/www/html/ && sudo chmod -R 755 /var/www/html/ && sudo systemctl restart nginx && rm -rf ~/vertexfrontend_build"
         
         echo [SUCCESS] Deployment complete!
         echo.
@@ -45,3 +46,18 @@ if %ERRORLEVEL% EQU 0 (
 
 echo.
 pause
+```
+
+---
+
+## The Key Change:
+
+Your build structure is:
+```
+dist/
+└── vertex/
+    └── browser/  ← Files are HERE!
+        ├── index.html
+        ├── main.js
+        ├── styles.css
+        └── assets/
