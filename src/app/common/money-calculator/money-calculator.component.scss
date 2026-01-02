@@ -1,361 +1,134 @@
-  // about us  lining
-  .comp-kkgi89rs {
-    width: 200px;
-    height: 5px;
-  }
-  .comp-kkgi89rs {
-    --lnw: 3px;
-    --brd: 66,66,66;
-    --alpha-brd: 1;
-  }
-  
-  .aVng1S {
-    border-top: var(--lnw,2px) solid rgba(var(--brd,var(--color_15,color_15)),var(--alpha-brd,1));
-    box-sizing: border-box;
-    height: 0;
-    position: relative;
-    margin: 0px 0px 53px calc((100% - 980px) * 0.5);
-    left: 432px;
-  }
+  .vertex-banking-section {
+            background: #ffff;
+            padding: 60px 0;
+        }
 
-/* Professional Banking Events Section */
-.banking-events-section {
-  position: relative;
-}
+        .fl-heading {
+            font-size: 55px;
+            line-height: 1.2em;
+            text-align: center;
+            color: #4c4c4c;
+            padding: 0 20px 40px;
+            font-weight: 600;
+            font-family: 'Playfair Display', serif;
+            margin: 0;
+        }
 
-.banking-events-section::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-image: 
-    radial-gradient(circle at 25% 25%, rgba(59, 130, 246, 0.05) 0%, transparent 50%),
-    radial-gradient(circle at 75% 75%, rgba(251, 191, 36, 0.05) 0%, transparent 50%);
-  pointer-events: none;
-}
+        .slider-wrapper {
+            max-width: 1400px;
+            margin: 0 auto;
+            overflow: hidden;
+            padding: 0 20px;
+        }
 
-/* Events Slider */
-#eventsSlider {
-  transform: translateX(0%);
-  transition: transform 0.5s ease-in-out;
-}
+        .banking-grid {
+            display: flex;
+            animation: slide 40s linear infinite;
+            gap: 25px;
+            
+        }
 
-.slide-indicator {
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
+        .banking-card {
+            position: relative;
+            overflow: hidden;
+            border-radius: 12px;
+            cursor: pointer;
+            min-width: calc(25% - 19px);
+            height: 300px;
+            flex-shrink: 0;
+        }
 
-.slide-indicator.active {
-  background-color: #2563eb !important;
-  transform: scale(1.2);
-}
+        .banking-card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
 
-.slide-indicator:not(.active):hover {
-  background-color: #6b7280 !important;
-}
+        .banking-card:hover img {
+            transform: scale(1.1);
+        }
 
-/* Professional Card Effects */
-.group:hover {
-  transform: translateY(-2px);
-  transition: all 0.3s ease;
-}
+        .overlay {
+            position: absolute;
+            inset: 0;
+            background: rgba(1, 26, 65, 0.44);
+            color: white;
+            opacity: 0;
+            transition: opacity 0.5s ease;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            text-align: center;
+            padding: 20px;
+        }
 
-.group:hover .shadow-lg {
-  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
-}
+        .banking-card:hover .overlay {
+            opacity: 1;
+        }
 
-/* Background Images */
-.bg-2 { background-image: url('/images/WhyChooseUs.png'); }
-.bg-3 { background-image: url('/images/WhyChooseUs1.png'); }
-.bg-4 { background-image: url('/images/WhyChooseUs.png'); }
-.bg-5 { background-image: url('/images/WhyChooseUs1.png'); }
-.bg-6 { background-image: url('/images/WhyChooseUs.png'); }
-.bg-7 { background-image: url('/images/WhyChooseUs1.png'); }
-.bg-8 { background-image: url('/images/WhyChooseUs.png'); }
-.bg-9 { background-image: url('/images/WhyChooseUs1.png'); }
-.bg-10 { background-image: url('/images/WhyChooseUs.png'); }
+        .overlay h3 {
+            font-size: 22px;
+            margin-bottom: 10px;
+            font-weight: 600;
+            line-height: 1.4;
+        }
 
-.bg-image {
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  transition: transform 0.3s ease;
-}
+        @keyframes slide {
+            0% {
+                transform: translateX(0);
+            }
+            100% {
+                transform: translateX(-100%);
+            }
+        }
 
-/* Professional Hover Effects */
-.group:hover .bg-image {
-  transform: scale(1.05);
-}
+        /* Pause animation on hover */
+        .slider-wrapper:hover .banking-grid {
+            animation-play-state: paused;
+        }
 
-/* Certificate Card Hover Effects */
-.group:hover .w-12 {
-  transform: scale(1.05);
-  transition: transform 0.3s ease;
-}
+        @media (max-width: 768px) {
+            .fl-heading {
+                font-size: 36px;
+                padding-bottom: 30px;
+            }
 
-/* Responsive Design */
-@media (max-width: 1024px) {
-  .banking-events-section h2 {
-    font-size: 3rem;
-  }
-  
-  .banking-events-section .text-xl {
-    font-size: 1.125rem;
-  }
-}
+            .banking-card {
+                min-width: calc(50% - 13px);
+                height: 200px;
+            }
 
-@media (max-width: 768px) {
-  .banking-events-section h2 {
-    font-size: 2.5rem;
-  }
-  
-  .banking-events-section .text-xl {
-    font-size: 1rem;
-  }
-  
-  .banking-events-section .grid {
-    grid-template-columns: 1fr;
-    gap: 2rem;
-  }
-  
-  #eventsSlider .grid {
-    grid-template-columns: 1fr;
-  }
-  
-  .banking-events-section .px-8 {
-    padding-left: 1.5rem;
-    padding-right: 1.5rem;
-  }
-  
-  .banking-events-section .py-6 {
-    padding-top: 1rem;
-    padding-bottom: 1rem;
-  }
-}
+            @keyframes slide {
+                0% {
+                    transform: translateX(0);
+                }
+                100% {
+                    transform: translateX(-100%);
+                }
+            }
+        }
 
-@media (max-width: 480px) {
-  .banking-events-section h2 {
-    font-size: 2rem;
-  }
-  
-  .banking-events-section .text-2xl {
-    font-size: 1.5rem;
-  }
-  
-  .banking-events-section .text-lg {
-    font-size: 1rem;
-  }
-  
-  .banking-events-section .px-6 {
-    padding-left: 1rem;
-    padding-right: 1rem;
-  }
-}
+        @media (max-width: 480px) {
+            .fl-heading {
+                font-size: 28px;
+            }
 
-  //slide
-  /* component.css or global styles */
-  .section-title__title {
-    margin: 0;
-      margin-top: 0px;
-    color: var(--oxpins-black);
-    font-size: 50px;
+            .banking-card {
+                min-width: 100%;
+                height: 200px;
+            }
 
-  line-height: 40px;
-  font-weight: 900;
-  letter-spacing: -0.04em;
-  margin-top: 6px;
-  font-size: 33px;
-  line-height: 47px;
-  }
- /* Hide scrollbar (optional) */
- .scrollbar-hide::-webkit-scrollbar {
-  display: none;
-}
-.scrollbar-hide {
-  -ms-overflow-style: none;
-  scrollbar-width: none;
-}
-.bg-white {
-  --tw-bg-opacity: 1;
-  background-color: #fff;
-  margin: 8px;
-}
-// linig 
-.comp-kkgi89rs {
-  width: 200px;
-  height: 5px;
-}
-.comp-kkgi89rs {
-  --lnw: 3px;
-  --brd: 66,66,66;
-  --alpha-brd: 1;
-}
+            .overlay h3 {
+                font-size: 18px;
+            }
 
-.aVng1S {
-  border-top: var(--lnw,2px) solid rgba(var(--brd,var(--color_15,color_15)),var(--alpha-brd,1));
-  box-sizing: border-box;
-  height: 0;
-  position: relative;
-  margin: 0px 0px 53px calc((100% - 980px) * 0.5);
-  left: 432px;
-}
-
-// text
-.t_ceter[_ngcontent-ng-c2779934100] {
-  text-align: center;
-  text-decoration: none;
-  font-size: 21px;
-  color: #000;
-}
-.leading-relaxed[_ngcontent-ng-c2779934100] {
-  line-height: 1.625;
-  font-size: 14px;
-  color: black;
-  text-align: justify;
-  padding: 15px;
-  padding: 2px;
-}
-.text-sm {
-  font-size: 0.875rem;
-  line-height: 1.25rem;
-  padding: 7px;
-}
-
-
-@media (max-width: 767px) {
-  .w-full {
-    width: auto;
-  }
-  .bg-white[_ngcontent-ng-c321416114] {
-    --tw-bg-opacity: 1;
-    background-color: #fff;
-    margin: 35px;
-    padding: 5px;
-  }
-}
-
-// slider
-/* Slider */
-.slider-container {
-  overflow: hidden;
-  width: 100%;
-}
-
-.slider-track {
-  display: flex;
-
-  animation: scroll 30s linear infinite;
-}
-
-.slider-item {
-  min-width: 100%;
-  text-align: center;
-  color: white;
-  font-size: 20px;
-  position: relative;
-}
-
-.bg-image {
-  width: 100%;
-  height: 65vh;
-  background-size: cover;
-  background-position: center;
-}
-
-@keyframes scroll {
-  0%   { transform: translateX(0); }
-  100% { transform: translateX(-400%); } /* depends on number of items */
-}
-
-  // slider
-.bgclor{
-  padding: 20px;
-  margin-top: 17px;
-  transform: translateY(-3px);
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25);
-  background: linear-gradient( to right, #49cc0d, #FFD058);  
-
-  
-}
-
-.divider-with-logo {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  margin: 30px auto;
-}
-
-.divider-with-logo .line {
-  flex: 1;
-  height: 3px;
-  background-color: #0073e6; /* Adjust to your brand color */
-}
-
-.divider-with-logo .divider-logo {
-  width: 80px; /* Adjust logo size as needed */
-  margin: 0 20px;
-  vertical-align: middle;
-}
-// image gallr
-.vertex-banking-section {
-  background: #f4f4f4;
-  padding: 60px 20px;
-}
-
-.banking-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  gap: 25px;
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-.banking-card {
-  position: relative;
-  overflow: hidden;
-  border-radius: 12px;
-  cursor: pointer;
-}
-
-.banking-card img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: transform 0.5s ease;
-}
-
-.banking-card:hover img {
-  transform: scale(1.1);
-}
-
-.overlay {
-  position: absolute;
-  inset: 0;
-  background:#011a4170;
-  color: white;
-  opacity: 0;
-  transition: opacity 0.5s ease;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  text-align: center;
-  padding: 20px;
-}
-
-.banking-card:hover .overlay {
-  opacity: 1;
-}
-
-.overlay h3 {
-  font-size: 22px;
-  margin-bottom: 10px;
-  font-weight: 600;
-}
-
-.overlay p {
-  font-size: 16px;
-  line-height: 1.5;
-}
+            @keyframes slide {
+                0% {
+                    transform: translateX(0);
+                }
+                100% {
+                    transform: translateX(-100%);
+                }
+            }
+        }

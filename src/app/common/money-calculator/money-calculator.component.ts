@@ -2,6 +2,8 @@ import { Component, OnInit, NgZone } from '@angular/core';
 import { Router } from '@angular/router';
 import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 import { CommonModule } from '@angular/common';
+import { CarouselModule, OwlOptions } from 'ngx-owl-carousel-o';
+
 declare var myCustomFunction: any;
 
 export interface SliderItem {
@@ -11,24 +13,71 @@ export interface SliderItem {
 }
 
 @Component({
-    selector: 'app-money-calculator',
-    imports: [ReactiveFormsModule,CommonModule],
-    standalone: true,
-    templateUrl: './money-calculator.component.html',
-    styleUrls: ['./money-calculator.component.scss']
+  selector: 'app-money-calculator',
+  imports: [ReactiveFormsModule, CommonModule, CarouselModule],
+  standalone: true,
+  templateUrl: './money-calculator.component.html',
+  styleUrls: ['./money-calculator.component.scss']
 })
 export class MoneyCalculatorComponent implements OnInit {
- 
+
   private currentSlide = 0;
   private totalSlides = 2;
   private autoSlideInterval: any;
 
-  constructor(private ngZone: NgZone) {}
+  customOptions: OwlOptions = {
+    loop: true,
+    mouseDrag: true,
+    touchDrag: true,
+    pullDrag: true,
+    dots: true,
+    navSpeed: 600,
+    navText: ['<i class="nav-arrow">‹</i>', '<i class="nav-arrow">›</i>'],
+    autoplay: true,
+    autoplayTimeout: 3000,
+    autoplayHoverPause: true,
+    autoplaySpeed: 1000,
+    slideBy: 1,
+    margin: 15,
+    stagePadding: 0,
+    smartSpeed: 1000,
+    center: false,
+    rewind: true,
+    responsive: {
+      0: {
+        items: 1,
+        margin: 10
+      },
+      576: {
+        items: 2,
+        margin: 12
+      },
+      768: {
+        items: 3,
+        margin: 15
+      },
+      1024: {
+        items: 4,
+        margin: 15
+      },
+      1200: {
+        items: 4,
+        margin: 20
+      }
+    },
+    nav: true
+  }
+
+  constructor(private ngZone: NgZone) { }
 
   ngOnInit(): void {
-    myCustomFunction();
+    try {
+      myCustomFunction();
+    } catch (e) {
+      console.warn('myCustomFunction not found');
+    }
     this.startAutoSlide();
-    
+
     // Make functions globally available
     (window as any).previousSlide = this.previousSlide.bind(this);
     (window as any).nextSlide = this.nextSlide.bind(this);
@@ -68,11 +117,11 @@ export class MoneyCalculatorComponent implements OnInit {
   private updateSlider(): void {
     const slider = document.getElementById('eventsSlider');
     const indicators = document.querySelectorAll('.slide-indicator');
-    
+
     if (slider) {
       slider.style.transform = `translateX(-${this.currentSlide * 100}%)`;
     }
-    
+
     indicators.forEach((indicator, index) => {
       indicator.classList.toggle('active', index === this.currentSlide);
     });

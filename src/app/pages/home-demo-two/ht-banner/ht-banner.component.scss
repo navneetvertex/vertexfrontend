@@ -1,467 +1,12 @@
-// .banner-area {
-//     &::after {
-//         background: rgba(61, 255, 162, 0.22);
-//         filter: blur(100px);
-//     }
-
- 
-// $slider-height: 500px;
-// $slider-info-max-width: 600px;
-// $control-bg: rgba(0, 0, 0, 0.5);
-// $control-color: #fff;
-// $transition-speed: 1s;
-// $z-slide: 1;
-// $z-active-slide: 2;
-// $z-info: 3;
-// $z-controls: 4;
-
-// .custom-slider {
-//   position: relative;
-//   height: $slider-height;
-//   overflow: hidden;
-
-//   .slide {
-//     position: absolute;
-//   width: 100%;
-//   height: 81%;
-//   background-size: cover;
-//   background-position: center;
-//   opacity: 0;
-//   transition: opacity 1s ease;
-//   z-index: 1;
-//   // margin-top:30px;
-
-//     &.active {
-//       opacity: 1;
-//       z-index: $z-active-slide;
-//     }
-//   }
-
-//   .info {
-//     position: absolute;
-//     bottom: 80px;
-//     left: 50px;
-//     color: white;
-//     z-index: $z-info;
-//     max-width: $slider-info-max-width;
-//   }
-
-//   .shadow-img {
-//     position: absolute;
-//     bottom: 0;
-//     left: 0;
-//     width: 100%;
-//     height: auto;
-//     z-index: $z-active-slide;
-//     pointer-events: none;
-//   }
-
-//   .controls {
-//     position: absolute;
-//     bottom: 67px;
-//     left: 0;
-//     right: 0;
-//     text-align: center;
-//     z-index: $z-controls;
-
-//     button {
-//       background-color: $control-bg;
-//       border: none;
-//       color: $control-color;
-//       padding: 10px 20px;
-//       margin: 0 5px;
-//       font-size: 18px;
-//       cursor: pointer;
-//     }
-//   }
-// }
-
-// }
-// .banner-area[_ngcontent-ng-c2116913799] .custom-slider[_ngcontent-ng-c2116913799] .controls[_ngcontent-ng-c2116913799] button[_ngcontent-ng-c2116913799]{
-//   background-color: rgba(239, 243, 244, 0.06);
-//   border: none;
-//   color: #000;
-//   padding: 36px 20px;
-//   margin: 0 5px;
-//   font-size: 51px;
-//   cursor: pointer;
-// }
-
-// @media (max-width: 640px) {
-
-// .slide {
-//   position: absolute;
-// width: 100%;
-// height: 81%;
-// background-size: cover;
-// background-position: center;
-// opacity: 0;
-// transition: opacity 1s ease;
-// z-index: 1;
-// // margin-top:10px;
-// }
-// }
-
-// // nnew code foe newslider
-// .img-container {
-//   position: relative;
-//   width: 100%;
-//   max-width: 100%;
-//   height: 400px;
-//   overflow: hidden;
-//   margin: auto;
-// }
-
-// .img-container div {
-//   position: absolute;
-//   width: 100%;
-//   height: 100%;
-//   opacity: 0;
-//   transition: opacity 0.6s ease-in-out;
-// }
-
-// .img-container div.selected {
-//   opacity: 1;
-//   z-index: 1;
-// }
-
-// img {
-//   width: 100%;
-//   height: 100%;
-//   object-fit: cover;
-// }
-
-
-// @import url('https://fonts.googleapis.com/css?family=Raleway');
-
-// * {
-// 	box-sizing: border-box;
-// }
-
-// body {
-// 	font-family: 'Raleway';
-// 	margin: 0;
-// }
-
-// .title {
-// 	background: rgba(255, 255, 255, 0.7);
-// 	color: #333;
-// 	position: fixed;
-// 	text-align: right;
-// 	top: 0;
-// 	right: 0;
-// 	padding: 10px 15px;
-// 	margin: 0;
-// 	z-index: 100;
-// }
-
-// .slider {
-// 	position: relative;
-// 	overflow: hidden;
-// 	height: 100vh;
-// 	width: 100vw;
-// }
-
-// .slide {
-// 	background-position: center center;
-// 	background-size: cover;
-// 	position: absolute;
-// 	top: 0;
-// 	left: 100%;
-// 	height: 100%;
-// 	width: 100%;
-// }
-
-// .slide.active {
-// 	transform: translateX(-100%);
-// }
-
-// .slide .info {
-
-//   color: #fff;
-// 	padding: 20px 15px;
-// 	position: absolute;
-// 	opacity: 0.1;
-// 	top: 80px;
-// 	left: 40px;
-// 	text-align: center;
-// 	width: 300px;
-// 	max-width: 100%;
-// }
-
-// .slide.active .info{
-// 	opacity: 1;
-// 	transform: translateY(-40px);
-// 	transition: all 0.5s ease-in-out 0.8s;
-// }
-
-// .slide .info h1 {
-// 	margin: 10px 0;
-// }
-
-// .slide .info p {
-// 	letter-spacing: 1px;
-// }
-
-// .eraser {
-// 	/* background: #f5f5f5e5; */
-// 	position: absolute;
-// 	transition: transform 0.5s ease-in-out;
-//   opacity: 0.95;
-// 	top: 0;
-// 	left: 100%;
-// 	height: 100%;
-// 	width: 100%;
-// 	z-index: 100;
-// }
-
-// .eraser.active {
-// 	transform: translateX(-100%);
-// }
-
-// .buttons-container {
-// 	position: absolute;
-// 	bottom: 50px;
-// 	right: 60px;
-
-  
-// }
-
-// .buttons-container button {
-// 	border: 2px solid #fff;
-// 	background-color: transparent;
-// 	color: #fff;
-// 	cursor: pointer;
-// 	padding: 8px 30px;
-//   margin-right: 10px;
-// }
-
-// .buttons-container button:hover {
-// 	background-color: #fff;
-// 	color: #A9A9A9;
-//   opacity: 0.9;
-// }
-
-
-// @media (max-width: 400px) {
-// 	.slide .info {
-// 		top: 100px;
-// 		left: 10px;
-// 	}
-// }
-
-// new slider sssssssssssssssssssssssssssssssssssssssss
-
-
-// <!-- new cde jkkbjgkbjgkblfglkblfkglbkflklkfklk -->
-
-// .slider-wrapper {
-//   position: relative;
-//   width: 100%;
-//   height: 75vh;/* or auto if responsive  slider heigt */
-//   overflow: hidden;
-// }
-// .slider-one,
-// .slider-two,
-// .slider-three,
-// .slider-four {
-//   width: 100%;
-//   height: 112vh;
-//   position: absolute;
-//   top: 0;
-//   left: 0;
-//   animation: slider-one 12s linear infinite;
-
-//   .slider-one-image,
-//   .slider-two-image,
-//   .slider-three-image,
-//   .slider-four-image {
-//     width: 110%;
-//     height: 70%;
-//     // background-image: url("/images/RD1.jpg");
-
-//     background-position: center;
-//     background-size: cover;
-//     background-repeat: no-repeat;
-//     animation: zoom-out 3s linear infinite;
-   
-
-
-//     .slider-text {
-//       position: absolute;
-//       top: 5%;
-//       left: 5%;
-//       color: #ffffff;
-//       width: 600px;
-//       text-transform: capitalize;
-//       animation: text-up 12s linear infinite;
-//       transform: translateY(100px);
-//       animation-delay: 0s;
-
-//       h1 {
-//         font-size: 2.5rem;
-//         margin-bottom: 20px;
-//       }
-
-//       p {
-//         font-size: 18px;
-//         line-height: 28px;
-//       }
-//     }
-//   }
-// }
-
-// .slider-two {
-//   animation: slider-two 12s linear infinite;
-
-//   .slider-two-image {
-//     background-image: url("/images/Franchise2.jpg");
-//     .slider-text {
-//       animation-delay: 3s;
-//     }
-//   }
-// }
-
-// .slider-three {
-//   animation: slider-three 12s linear infinite;
-
-//   .slider-three-image {
-//     background-image: url("/images/Vertex.jpg");
-
-//     .slider-text {
-//       animation-delay: 6s;
-//     }
-//   }
-// }
-
-// .slider-four {
-//   animation: slider-four 12s linear infinite;
-
-//   .slider-four-image {
-//     background-image: url("/images/slider2.jpg");
-//     .slider-text {
-//       animation-delay: 9s;
-//     }
-//   }
-// }
-
-// @keyframes text-up {
-//   10% {
-//     transform: translateY(0px);
-//   }
-
-//   100% {
-//     transform: translateY(0px);
-//   }
-// }
-
-// @keyframes zoom-out {
-//   100% {
-//     width: 100%;
-//   }
-// }
-
-
-// @keyframes slider-one {
-//   0% {
-//     visibility: visible;
-//   }
-
-//   25% {
-//     visibility: hidden;
-//   }
-
-//   50% {
-//     visibility: hidden;
-//   }
-
-//   75% {
-//     visibility: hidden;
-//   }
-
-//   100% {
-//     visibility: visible;
-//   }
-// }
-
-// @keyframes slider-two {
-//   0% {
-//     visibility: hidden;
-//   }
-
-//   25% {
-//     visibility: hidden;
-//   }
-
-//   50% {
-//     visibility: visible;
-//   }
-
-//   75% {
-//     visibility: hidden;
-//   }
-
-//   100% {
-//     visibility: hidden;
-//   }
-// }
-
-// @keyframes slider-three {
-//   0% {
-//     visibility: hidden;
-//   }
-
-//   25% {
-//     visibility: hidden;
-//   }
-
-//   50% {
-//     visibility: hidden;
-//   }
-
-//   75% {
-//     visibility: visible;
-//   }
-
-//   100% {
-//     visibility: hidden;
-//   }
-// }
-
-// @keyframes slider-four {
-//   0% {
-//     visibility: hidden;
-//   }
-
-//   25% {
-//     visibility: hidden;
-//   }
-
-//   50% {
-//     visibility: hidden;
-//   }
-
-//   75% {
-//     visibility: hidden;
-//   }
-
-//   100% {
-//     visibility: visible;
-//   }
-// }
-
-// new slider demo
-// new slider code 
-/* Professional Banking Hero Styles - Enhanced & Responsive */
-
 // Hero Section Base
 .hero-section {
   position: relative;
   width: 100%;
+  height: 50%;
   overflow: hidden;
   background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
   margin-top: 120px;
-  
+
   @media (max-width: 768px) {
     margin-top: 80px;
     padding-top: 0;
@@ -482,6 +27,7 @@
   position: relative;
   width: 100%;
   height: 100%;
+  // border: 4px solid red;
 }
 
 .banking-hero-swiper {
@@ -491,7 +37,7 @@
   height: 100vh;
   min-height: 700px;
   max-height: 900px;
-  
+
   @media (max-width: 768px) {
     height: 100vh;
     min-height: 600px;
@@ -528,31 +74,25 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(
-    135deg,
-    rgba(195, 92, 255, 0.2) 0%,
-    rgba(1, 26, 65, 0.3) 50%,
-    rgba(255, 209, 92, 0.2) 100%
-  );
+  background: linear-gradient(135deg,
+      rgba(195, 92, 255, 0.2) 0%,
+      rgba(1, 26, 65, 0.3) 50%,
+      rgba(255, 209, 92, 0.2) 100%);
   z-index: 2;
 }
 
 .banking-overlay-2 {
-  background: linear-gradient(
-    135deg,
-    rgba(255, 209, 92, 0.2) 0%,
-    rgba(1, 26, 65, 0.3) 50%,
-    rgba(255, 209, 92, 0.2) 100%
-  );
+  background: linear-gradient(135deg,
+      rgba(255, 209, 92, 0.2) 0%,
+      rgba(1, 26, 65, 0.3) 50%,
+      rgba(255, 209, 92, 0.2) 100%);
 }
 
 .banking-overlay-3 {
-  background: linear-gradient(
-    135deg,
-    rgba(255, 209, 92, 0.2) 0%,
-    rgba(1, 26, 65, 0.3) 50%,
-    rgba(255, 209, 92, 0.2) 100%
-  );
+  background: linear-gradient(135deg,
+      rgba(255, 209, 92, 0.2) 0%,
+      rgba(1, 26, 65, 0.3) 50%,
+      rgba(255, 209, 92, 0.2) 100%);
 }
 
 .banking-content {
@@ -907,6 +447,7 @@
     opacity: 0;
     transform: translateY(60px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
@@ -914,9 +455,12 @@
 }
 
 @keyframes pulse {
-  0%, 100% {
+
+  0%,
+  100% {
     transform: scale(1);
   }
+
   50% {
     transform: scale(1.05);
   }
@@ -929,76 +473,76 @@
   .hero-section {
     margin-top: 80px;
   }
-  
+
   .banking-hero-swiper {
     height: 100vh;
     min-height: 500px;
     max-height: 700px;
   }
-  
+
   .banking-content {
     padding: 0 0.75rem;
   }
-  
+
   .banking-text-container {
     max-width: 100%;
   }
-  
+
   .trust-badge {
     padding: 0.5rem 1.25rem;
     margin-bottom: 1.5rem;
   }
-  
+
   .trust-text {
     font-size: 0.75rem;
     letter-spacing: 0.05em;
   }
-  
+
   .title-primary {
     font-size: 2rem;
     line-height: 1.1;
   }
-  
+
   .title-secondary {
     font-size: 1.25rem;
     line-height: 1.2;
   }
-  
+
   .banking-description {
     font-size: 0.9rem;
     line-height: 1.6;
     margin-bottom: 1.5rem;
     padding: 0 0.5rem;
   }
-  
+
   .banking-stats {
     flex-direction: column;
     gap: 1rem;
     padding: 1rem;
     margin-bottom: 2rem;
   }
-  
+
   .stat-divider {
     width: 3rem;
     height: 2px;
     background: linear-gradient(to right, transparent, rgba(255, 255, 255, 0.3), transparent);
   }
-  
+
   .stat-number {
     font-size: 1.75rem;
   }
-  
+
   .stat-label {
     font-size: 0.8rem;
   }
-  
+
   .banking-features {
     flex-direction: column;
     align-items: center;
     gap: 0.75rem;
     margin-bottom: 2rem;
   }
-  
+
   .feature-item {
     width: 100%;
     max-width: 280px;
@@ -1006,18 +550,18 @@
     padding: 1rem 1.5rem;
     font-size: 0.9rem;
   }
-  
+
   .feature-icon {
     width: 1.25rem;
     height: 1.25rem;
   }
-  
+
   .banking-achievements {
     flex-direction: column;
     gap: 1rem;
     margin-bottom: 2rem;
   }
-  
+
   .achievement-item {
     width: 100%;
     max-width: 320px;
@@ -1027,26 +571,26 @@
     text-align: center;
     gap: 1rem;
   }
-  
+
   .achievement-icon {
     width: 2.5rem;
     height: 2.5rem;
   }
-  
+
   .achievement-number {
     font-size: 1.25rem;
   }
-  
+
   .achievement-label {
     font-size: 0.8rem;
   }
-  
+
   .banking-buttons {
     flex-direction: column;
     align-items: center;
     gap: 0.75rem;
   }
-  
+
   .btn-banking-primary,
   .btn-banking-secondary {
     width: 100%;
@@ -1055,12 +599,12 @@
     padding: 0.875rem 1.5rem;
     font-size: 0.95rem;
   }
-  
+
   .btn-icon {
     width: 1rem;
     height: 1rem;
   }
-  
+
   // Swiper Navigation for Mobile
   .banking-hero-swiper .swiper-button-next,
   .banking-hero-swiper .swiper-button-prev {
@@ -1068,24 +612,24 @@
     height: 45px;
     margin-top: -22.5px;
   }
-  
+
   .banking-hero-swiper .swiper-button-next::after,
   .banking-hero-swiper .swiper-button-prev::after {
     font-size: 1rem;
   }
-  
+
   .banking-hero-swiper .swiper-button-next {
     right: 10px;
   }
-  
+
   .banking-hero-swiper .swiper-button-prev {
     left: 10px;
   }
-  
+
   .banking-hero-swiper .swiper-pagination {
     bottom: 15px;
   }
-  
+
   .banking-hero-swiper .swiper-pagination-bullet {
     width: 12px;
     height: 12px;
@@ -1098,64 +642,64 @@
   .hero-section {
     margin-top: 100px;
   }
-  
+
   .banking-hero-swiper {
     height: 90vh;
     min-height: 600px;
     max-height: 800px;
   }
-  
+
   .banking-content {
     padding: 0 1.25rem;
   }
-  
+
   .title-primary {
     font-size: 2.75rem;
   }
-  
+
   .title-secondary {
     font-size: 1.75rem;
   }
-  
+
   .banking-description {
     font-size: 1.05rem;
     margin-bottom: 2rem;
   }
-  
+
   .banking-stats {
     gap: 1.75rem;
     padding: 1.5rem;
     margin-bottom: 2.5rem;
   }
-  
+
   .stat-number {
     font-size: 2.25rem;
   }
-  
+
   .banking-features {
     gap: 1.25rem;
     margin-bottom: 2.5rem;
   }
-  
+
   .feature-item {
     padding: 1.1rem 1.75rem;
   }
-  
+
   .banking-achievements {
     gap: 1.75rem;
     margin-bottom: 2.5rem;
   }
-  
+
   .achievement-item {
     padding: 1.75rem 2rem;
   }
-  
+
   .btn-banking-primary,
   .btn-banking-secondary {
     padding: 1rem 2rem;
     font-size: 1.05rem;
   }
-  
+
   // Swiper Navigation for Tablets
   .banking-hero-swiper .swiper-button-next,
   .banking-hero-swiper .swiper-button-prev {
@@ -1169,32 +713,32 @@
   .banking-hero-swiper {
     min-height: 650px;
   }
-  
+
   .title-primary {
     font-size: 3.25rem;
   }
-  
+
   .title-secondary {
     font-size: 2rem;
   }
-  
+
   .banking-description {
     font-size: 1.1rem;
   }
-  
+
   .banking-stats {
     gap: 2.25rem;
     padding: 1.75rem;
   }
-  
+
   .stat-number {
     font-size: 2.5rem;
   }
-  
+
   .banking-features {
     gap: 1.5rem;
   }
-  
+
   .banking-achievements {
     gap: 2rem;
   }
@@ -1205,15 +749,15 @@
   .banking-hero-swiper {
     min-height: 700px;
   }
-  
+
   .banking-content {
     max-width: 1200px;
   }
-  
+
   .title-primary {
     font-size: 3.75rem;
   }
-  
+
   .title-secondary {
     font-size: 2.25rem;
   }
@@ -1224,7 +768,7 @@
   .banking-hero-swiper {
     min-height: 750px;
   }
-  
+
   .banking-content {
     max-width: 1400px;
   }
@@ -1236,29 +780,29 @@
     height: 100vh;
     min-height: 500px;
   }
-  
+
   .banking-content {
     padding: 1rem;
   }
-  
+
   .title-primary {
     font-size: 2.5rem;
   }
-  
+
   .title-secondary {
     font-size: 1.5rem;
   }
-  
+
   .banking-description {
     font-size: 1rem;
     margin-bottom: 1.5rem;
   }
-  
+
   .banking-stats {
     margin-bottom: 1.5rem;
     padding: 1rem;
   }
-  
+
   .banking-features,
   .banking-achievements {
     margin-bottom: 1.5rem;
@@ -1266,7 +810,8 @@
 }
 
 // High DPI Displays
-@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+@media (-webkit-min-device-pixel-ratio: 2),
+(min-resolution: 192dpi) {
   .hero-image-container {
     background-image: url('/images/homepagebanner@2x.webp');
   }
@@ -1275,7 +820,7 @@
 // Fallback for missing images
 .hero-image-container {
   background-color: #1e40af;
-  background-image: 
+  background-image:
     linear-gradient(135deg, rgba(30, 64, 175, 0.9) 0%, rgba(59, 130, 246, 0.8) 100%),
     url('/images/homepagebanner.webp');
 }
@@ -1287,15 +832,15 @@
     min-height: auto;
     max-height: none;
   }
-  
+
   .banking-overlay {
     display: none;
   }
-  
+
   .banking-buttons {
     display: none;
   }
-  
+
   .banking-hero-swiper .swiper-button-next,
   .banking-hero-swiper .swiper-button-prev,
   .banking-hero-swiper .swiper-pagination {
@@ -1306,4 +851,3 @@
 .tm_130 {
   margin-top: 130px;
 }
-
